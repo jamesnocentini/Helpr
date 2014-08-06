@@ -41,4 +41,28 @@
     "description": "Hair products",
     "beacon_id": "2"
  },
+ "kitchen": {
+    "products": [
+                 {
+                 "title": "Biotex Stain Removing Powder (500g)"
+                 "imageName": "biotex.jpg",
+                 "description": "Benefit from the power of soaking with Bio-tex Stain Removing Powder. Bio-tex removes the ground-in dirt and grime that normal machine washing usually leaves behind. The Bleach Free powder gently softens and loosens even the most stubborn stains such as stains of grass, milk, blood, egg, grease and chocolate. Bio-tex brightens without the use of of bleach. On Colors, the Bleach Free formulation is safe and just as effective."
+                 },
+                 {
+                 "title": "Intensive Whitening Soap with Whitening Essentials 80g Small Bar",
+                 "imageName": "intensive_whitening_soap.jpg",
+                 "description": "Contains advanced white activ complex technology to reveal white skin. Packed with skin moisturizer, Vit E, Pro VitaminB5 for softer,smoother skin"
+                 },
+                 {
+                 "title": "Cif Professional Cream Cleaner Original",
+                 "imageName": "cif.jpg",
+                 "description": "Tackles the toughest cleaning jobs in the kitchen bathroom and all around the office. 500ml."
+                 },
+                 {
+                 "title": "Domestos",
+                 "imageName": "domestos.jpg",
+                 "description": "Kills all known germs dead leaving your toilet white and sparkling. Certified by RSPH Royal Society for Public Health. Domestos Extended Germ Kill Ultra White & Sparkle"
+                 }
+    ]
+ }
 ]
