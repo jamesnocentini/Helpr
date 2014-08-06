@@ -24,6 +24,11 @@
 		093DA3261992704A00BB4683 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 093DA3251992704A00BB4683 /* products.json */; };
 		093DA327199281A300BB4683 /* OpenTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE2519926BAD00EFD9AE /* OpenTok.framework */; };
 		09FFCE831992B3B500999E27 /* RangingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FFCE821992B3B500999E27 /* RangingManager.m */; };
+		09FFCE9E1992BED200999E27 /* check_mark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09FFCE971992BED200999E27 /* check_mark@2x.png */; };
+		09FFCE9F1992BED200999E27 /* done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09FFCE981992BED200999E27 /* done@2x.png */; };
+		09FFCEA01992BED200999E27 /* drop_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09FFCE991992BED200999E27 /* drop_down@2x.png */; };
+		09FFCEA11992BED200999E27 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FFCE9B1992BED200999E27 /* DropDownListView.m */; };
+		09FFCEA21992BED200999E27 /* DropDownViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FFCE9D1992BED200999E27 /* DropDownViewCell.m */; };
 		BE30A94F1992447600BF3351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A94E1992447600BF3351 /* AppDelegate.swift */; };
 		BE30A9511992447600BF3351 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A9501992447600BF3351 /* ViewController.swift */; };
 		BE30A9541992447600BF3351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE30A9521992447600BF3351 /* Main.storyboard */; };
@@ -81,6 +86,13 @@
 		093DA3251992704A00BB4683 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		09FFCE811992B3B500999E27 /* RangingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangingManager.h; sourceTree = "<group>"; };
 		09FFCE821992B3B500999E27 /* RangingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangingManager.m; sourceTree = "<group>"; };
+		09FFCE971992BED200999E27 /* check_mark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check_mark@2x.png"; sourceTree = "<group>"; };
+		09FFCE981992BED200999E27 /* done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done@2x.png"; sourceTree = "<group>"; };
+		09FFCE991992BED200999E27 /* drop_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drop_down@2x.png"; sourceTree = "<group>"; };
+		09FFCE9A1992BED200999E27 /* DropDownListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownListView.h; sourceTree = "<group>"; };
+		09FFCE9B1992BED200999E27 /* DropDownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownListView.m; sourceTree = "<group>"; };
+		09FFCE9C1992BED200999E27 /* DropDownViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownViewCell.h; sourceTree = "<group>"; };
+		09FFCE9D1992BED200999E27 /* DropDownViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownViewCell.m; sourceTree = "<group>"; };
 		BE30A9491992447600BF3351 /* Helpr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE30A94D1992447600BF3351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE30A94E1992447600BF3351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -183,6 +195,20 @@
 			name = iBeacon;
 			sourceTree = "<group>";
 		};
+		09FFCEA31992BEDB00999E27 /* kDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				09FFCE971992BED200999E27 /* check_mark@2x.png */,
+				09FFCE981992BED200999E27 /* done@2x.png */,
+				09FFCE991992BED200999E27 /* drop_down@2x.png */,
+				09FFCE9A1992BED200999E27 /* DropDownListView.h */,
+				09FFCE9B1992BED200999E27 /* DropDownListView.m */,
+				09FFCE9C1992BED200999E27 /* DropDownViewCell.h */,
+				09FFCE9D1992BED200999E27 /* DropDownViewCell.m */,
+			);
+			name = kDropDown;
+			sourceTree = "<group>";
+		};
 		BE30A9401992447500BF3351 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +232,7 @@
 		BE30A94B1992447600BF3351 /* Helpr */ = {
 			isa = PBXGroup;
 			children = (
+				09FFCEA31992BEDB00999E27 /* kDropDown */,
 				BE30A94E1992447600BF3351 /* AppDelegate.swift */,
 				09FFCE851992B66F00999E27 /* iBeacon */,
 				BE30A9551992447600BF3351 /* Images.xcassets */,
@@ -354,6 +381,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FFCE9F1992BED200999E27 /* done@2x.png in Resources */,
+				09FFCEA01992BED200999E27 /* drop_down@2x.png in Resources */,
+				09FFCE9E1992BED200999E27 /* check_mark@2x.png in Resources */,
 				0914A6481992A71900631DB0 /* biotex.jpg in Resources */,
 				0914A64C1992A71900631DB0 /* dove_pure_care_dry_oil.png in Resources */,
 				093DA3261992704A00BB4683 /* products.json in Resources */,
@@ -386,11 +416,13 @@
 				BE30A9511992447600BF3351 /* ViewController.swift in Sources */,
 				093DA3211992681300BB4683 /* Product.m in Sources */,
 				093DA31E1992638D00BB4683 /* ProductTableViewCell.m in Sources */,
+				09FFCEA11992BED200999E27 /* DropDownListView.m in Sources */,
 				0914A63E1992897B00631DB0 /* ProductCategory.m in Sources */,
 				093DA32419926C0E00BB4683 /* ProductDetailsViewController.m in Sources */,
 				BE30A94F1992447600BF3351 /* AppDelegate.swift in Sources */,
 				093DA31B1992627C00BB4683 /* ProductsListTableViewController.m in Sources */,
 				09FFCE831992B3B500999E27 /* RangingManager.m in Sources */,
+				09FFCEA21992BED200999E27 /* DropDownViewCell.m in Sources */,
 				BE70BE241992698700EFD9AE /* VideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

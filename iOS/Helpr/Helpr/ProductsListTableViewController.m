@@ -12,6 +12,21 @@
 #import "ProductCategory.h"
 #import "ProductDetailsViewController.h"
 
+@interface NSArray (myTransformingAddition)
+-(NSArray*)transformWithBlock:(id(^)(id))block;
+@end
+
+@implementation NSArray (myTransformingAddition)
+-(NSArray*)transformWithBlock:(id(^)(id))block{
+    NSMutableArray*result=[NSMutableArray array];
+    for(id x in self){
+        if (x)
+            [result addObject:block(x)];
+    }
+    return result;
+}
+@end
+
 @interface ProductsListTableViewController ()
 
 @end
@@ -54,6 +69,50 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Filter"
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(filterTableView)];
+
+}
+
+-(void)showPopUpWithTitle:(NSString*)popupTitle withOption:(NSArray*)arrOptions xy:(CGPoint)point size:(CGSize)size isMultiple:(BOOL)isMultiple{
+    
+    Dropobj = [[DropDownListView alloc] initWithTitle:popupTitle options:arrOptions xy:point size:size isMultiple:isMultiple];
+    Dropobj.delegate = self;
+    [Dropobj showInView:self.view animated:YES];
+    
+    [Dropobj SetBackGroundDropDwon_R:0.0 G:108.0 B:194.0 alpha:0.70];
+}
+
+- (void)DropDownListView:(DropDownListView *)dropdownListView didSelectedIndex:(NSInteger)anIndex {
+}
+
+- (void)DropDownListView:(DropDownListView *)dropdownListView Datalist:(NSMutableArray*)data {
+}
+
+- (void)DropDownListViewDidCancel{
+    
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    
+    if ([touch.view isKindOfClass:[UIView class]]) {
+        [Dropobj fadeOut];
+    }
+}
+
+- (void)filterTableView {
+
+    NSArray* categoryNames = [_categories transformWithBlock:^id(id o) {
+        return ((ProductCategory*)o).title;
+    }];
+
+    
+    [Dropobj fadeOut];
+    [self showPopUpWithTitle:@"Select Categories" withOption:categoryNames xy:CGPointMake(16, 58) size:CGSizeMake(287, 330) isMultiple:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {

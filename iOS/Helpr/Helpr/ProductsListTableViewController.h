@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "DropDownListView.h"
 
-@interface ProductsListTableViewController : UITableViewController
 
+@interface ProductsListTableViewController : UITableViewController<kDropDownListViewDelegate>
+{
+    DropDownListView * Dropobj;
+}
 - (void)loadProducts;
 
 @end
