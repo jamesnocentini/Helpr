@@ -6,6 +6,12 @@
 //  Copyright (c) 2014 James Nocentini. All rights reserved.
 //
 
+// TODO: Update the code to display different sections
+// TODO: Add the BeaconController with photo of the assistant
+// When we do the beacon detection we have the location
+// TODO: VideoController should show product information
+// TODO: Video chat should be with brand ambassadors
+
 import UIKit
 
 @UIApplicationMain
