@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
+NSString* RangingManager_DidRangeBeacons = @"RangingManager_DidRangeBeacons";
 
 @implementation RangingManager
 {
@@ -77,7 +78,7 @@
        didRangeBeacons:(NSArray*)beacons
               inRegion:(CLBeaconRegion*)region
 {
-//    [[DataRepository defaultRepository]reportBeaconSightings:beacons];
+    [[NSNotificationCenter defaultCenter] postNotificationName:RangingManager_DidRangeBeacons object:beacons];
 }
 
 
@@ -99,7 +100,7 @@
             if (previousState != -1)
             {
                 NSString *title = @"Bluetooth is Off";
-                NSString *message = @"Please enable Bluetooth to receive micro-location updates. Kontext uses iBeacon technology which relies on Bluetooth LE and is very power efficient.";
+                NSString *message = @"Please enable Bluetooth to receive micro-location updates. Helpr uses iBeacon technology which relies on Bluetooth LE and is very power efficient.";
                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alertView show];
             }
