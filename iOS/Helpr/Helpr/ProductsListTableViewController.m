@@ -9,6 +9,7 @@
 #import "ProductsListTableViewController.h"
 #import "ProductTableViewCell.h"
 #import "Product.h"
+#import "ProductDetailsViewController.h"
 
 @interface ProductsListTableViewController ()
 
@@ -97,14 +98,23 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    ProductDetailsViewController* destination = [segue destinationViewController];
+    
+    UITableViewCell* cell = (UITableViewCell*)sender;
+    NSIndexPath* path = [self.tableView indexPathForCell: cell];
+    
+    Product* product = _products[path.row];
+    [destination setProduct:product];
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
