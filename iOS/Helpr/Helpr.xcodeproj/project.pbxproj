@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093DA31B1992627C00BB4683 /* ProductsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */; };
+		093DA31E1992638D00BB4683 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA31D1992638D00BB4683 /* ProductTableViewCell.m */; };
+		093DA3211992681300BB4683 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA3201992681300BB4683 /* Product.m */; };
+		093DA32419926C0E00BB4683 /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA32319926C0E00BB4683 /* ProductDetailsViewController.m */; };
+		093DA3261992704A00BB4683 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 093DA3251992704A00BB4683 /* products.json */; };
 		BE30A94F1992447600BF3351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A94E1992447600BF3351 /* AppDelegate.swift */; };
 		BE30A9511992447600BF3351 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A9501992447600BF3351 /* ViewController.swift */; };
 		BE30A9541992447600BF3351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE30A9521992447600BF3351 /* Main.storyboard */; };
@@ -28,8 +33,8 @@
 		BE70BE43199270D600EFD9AE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE42199270D600EFD9AE /* AVFoundation.framework */; };
 		BE70BE45199270F800EFD9AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE44199270F800EFD9AE /* Foundation.framework */; };
 		BE70BE471992710500EFD9AE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE461992710500EFD9AE /* QuartzCore.framework */; };
-		BE70BE491992729B00EFD9AE /* OpenTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE2519926BAD00EFD9AE /* OpenTok.framework */; };
 		BE70BE4B1992755900EFD9AE /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE4A1992755900EFD9AE /* GLKit.framework */; };
+		BE70BE4D19927F0300EFD9AE /* OpenTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE2519926BAD00EFD9AE /* OpenTok.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		093DA3191992627C00BB4683 /* ProductsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsListTableViewController.h; sourceTree = "<group>"; };
+		093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsListTableViewController.m; sourceTree = "<group>"; };
+		093DA31C1992638D00BB4683 /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
+		093DA31D1992638D00BB4683 /* ProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewCell.m; sourceTree = "<group>"; };
+		093DA31F1992681300BB4683 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		093DA3201992681300BB4683 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		093DA32219926C0E00BB4683 /* ProductDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailsViewController.h; sourceTree = "<group>"; };
+		093DA32319926C0E00BB4683 /* ProductDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailsViewController.m; sourceTree = "<group>"; };
+		093DA3251992704A00BB4683 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		BE30A9491992447600BF3351 /* Helpr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE30A94D1992447600BF3351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE30A94E1992447600BF3351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +68,6 @@
 		BE30A9611992447600BF3351 /* HelprTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelprTests.swift; sourceTree = "<group>"; };
 		BE70BE231992698700EFD9AE /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		BE70BE2519926BAD00EFD9AE /* OpenTok.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenTok.framework; sourceTree = "<group>"; };
-		BE70BE2719926C4B00EFD9AE /* Helpr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Helpr-Bridging-Header.h"; sourceTree = "<group>"; };
 		BE70BE2A19926F6E00EFD9AE /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		BE70BE2C19926F7700EFD9AE /* libpthread.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpthread.dylib; path = usr/lib/libpthread.dylib; sourceTree = SDKROOT; };
 		BE70BE2E19926F8300EFD9AE /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
@@ -71,6 +84,7 @@
 		BE70BE44199270F800EFD9AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BE70BE461992710500EFD9AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BE70BE4A1992755900EFD9AE /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		BE70BE4C19927DEA00EFD9AE /* Helpr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Helpr-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE70BE4D19927F0300EFD9AE /* OpenTok.framework in Frameworks */,
 				BE70BE4B1992755900EFD9AE /* GLKit.framework in Frameworks */,
 				BE70BE2B19926F6E00EFD9AE /* libxml2.dylib in Frameworks */,
 				BE70BE2D19926F7700EFD9AE /* libpthread.dylib in Frameworks */,
@@ -94,7 +109,6 @@
 				BE70BE3B1992704C00EFD9AE /* SystemConfiguration.framework in Frameworks */,
 				BE70BE3519926FF000EFD9AE /* CoreTelephony.framework in Frameworks */,
 				BE70BE3119926FAF00EFD9AE /* libsqlite3.dylib in Frameworks */,
-				BE70BE491992729B00EFD9AE /* OpenTok.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,13 +145,22 @@
 		BE30A94B1992447600BF3351 /* Helpr */ = {
 			isa = PBXGroup;
 			children = (
+				093DA3251992704A00BB4683 /* products.json */,
 				BE70BE2519926BAD00EFD9AE /* OpenTok.framework */,
 				BE30A94E1992447600BF3351 /* AppDelegate.swift */,
-				BE30A9501992447600BF3351 /* ViewController.swift */,
+				BE30A9551992447600BF3351 /* Images.xcassets */,
 				BE70BE231992698700EFD9AE /* VideoViewController.swift */,
 				BE30A9521992447600BF3351 /* Main.storyboard */,
-				BE30A9551992447600BF3351 /* Images.xcassets */,
+				093DA31F1992681300BB4683 /* Product.h */,
+				093DA3201992681300BB4683 /* Product.m */,
+				093DA32219926C0E00BB4683 /* ProductDetailsViewController.h */,
+				093DA32319926C0E00BB4683 /* ProductDetailsViewController.m */,
+				093DA3191992627C00BB4683 /* ProductsListTableViewController.h */,
+				093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */,
+				093DA31C1992638D00BB4683 /* ProductTableViewCell.h */,
+				093DA31D1992638D00BB4683 /* ProductTableViewCell.m */,
 				BE30A94C1992447600BF3351 /* Supporting Files */,
+				BE30A9501992447600BF3351 /* ViewController.swift */,
 			);
 			path = Helpr;
 			sourceTree = "<group>";
@@ -146,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				BE30A94D1992447600BF3351 /* Info.plist */,
-				BE70BE2719926C4B00EFD9AE /* Helpr-Bridging-Header.h */,
+				BE70BE4C19927DEA00EFD9AE /* Helpr-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -270,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093DA3261992704A00BB4683 /* products.json in Resources */,
 				BE30A9541992447600BF3351 /* Main.storyboard in Resources */,
 				BE30A9561992447600BF3351 /* Images.xcassets in Resources */,
 			);
@@ -290,7 +314,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE30A9511992447600BF3351 /* ViewController.swift in Sources */,
+				093DA3211992681300BB4683 /* Product.m in Sources */,
+				093DA31E1992638D00BB4683 /* ProductTableViewCell.m in Sources */,
+				093DA32419926C0E00BB4683 /* ProductDetailsViewController.m in Sources */,
 				BE30A94F1992447600BF3351 /* AppDelegate.swift in Sources */,
+				093DA31B1992627C00BB4683 /* ProductsListTableViewController.m in Sources */,
 				BE70BE241992698700EFD9AE /* VideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
