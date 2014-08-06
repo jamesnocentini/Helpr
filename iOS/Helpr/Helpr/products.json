@@ -1,10 +1,13 @@
 [
- {
- "title": "Sample product 1",
- "imageName": "Product1.jpg"
- },
- {
- "title": "Sample product 2",
- "imageName": "Product2.jpg"
- }
+ "make_up": {
+    "products":[
+                    {
+                        "title": "Sample product 1",
+                        "imageName": "Product1.jpg",
+                        "description": "lorem ipsum"
+                    }
+                ],
+    "description": "This is all make up stuff",
+    "beacon_id": "1"
+    }
 ]
