@@ -15,7 +15,7 @@
 
 - (ProductCategory*) initFromJson:(NSDictionary*)jsonCategory
 {
-    self.title = jsonCategory[@"title"];
+    self.title = jsonCategory[@"description"];
     self.categoryDescription = jsonCategory[@"description"];
     self.beaconId = [jsonCategory[@"beacon_id"] integerValue];
 
