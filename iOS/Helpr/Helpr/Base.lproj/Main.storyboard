@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="2614" y="-151"/>
         </scene>
-        <!--View Controller-->
+        <!--Video View Controller-->
         <scene sceneID="Kmf-NL-12j">
             <objects>
-                <viewController id="YN1-Ys-rDi" sceneMemberID="viewController">
+                <viewController id="YN1-Ys-rDi" customClass="VideoViewController" customModule="Helpr" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hWw-96-bEA"/>
                         <viewControllerLayoutGuide type="bottom" id="0Xa-96-NPH"/>

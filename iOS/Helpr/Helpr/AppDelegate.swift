@@ -8,6 +8,11 @@
 
 import UIKit
 
+// TODO: Link the OpenTok framework
+// TODO: Create a view controller and link it in the storyboard
+// TODO: Copy the code from the other project
+// TODO: Figure out a way to select the correct token
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
