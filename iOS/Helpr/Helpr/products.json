@@ -14,28 +14,28 @@
     "products":[
                 {
                 "title": "Lynx Peace",
-                "imageName": "Lynx Peace.png",
+                "imageName": "lynx_peace.png",
                 "description": "Not content with bringing the world together, Lynx Peace is bringing shampoo and conditioner together to give you the slickest, softest hair – made for styling. With its undertones of violet, nutmeg, cedarwood and musk – this stuff truly has the power to unite. Lynx hair – get the look that gets the girl."
                 },
                 {
-                "title": "Sample product 1",
-                "imageName": "Product1.jpg",
-                "description": "lorem ipsum"
+                "title": "Lynx 2in1",
+                "imageName": "lynx_2in1.png",
+                "description": "Cuddly toys. Cushions.Kittens. Girls love soft stuff – they just can’t resist touching it. So it makes sense for Lynx to make shampoo – to give you touchably clean hair...Lynx 2-in-1 combines shampoo and conditioner to give you gotta-run-my-fingers-through-it hair. Lynx hair. Get the look that gets the girls."
                 },
                 {
-                "title": "Sample product 1",
-                "imageName": "Product1.jpg",
-                "description": "lorem ipsum"
+                "title": "Lynx Messy Look",
+                "imageName": "lynx_messy_look.png",
+                "description": "Whatever your style, Lynx styling products have got it covered. If you’re the guy who looks like he’s just got out of bed – and can’t wait to get back in it – then messed-up styling is gonna do the business. you know it. Lynx hair. Get the look that gets the girls."
                 },
                 {
-                "title": "Sample product 1",
-                "imageName": "Product1.jpg",
-                "description": "lorem ipsum"
+                "title": "Dove Heat Protect Spray",
+                "imageName": "dove_heat_product_spray.jpg",
+                "description": "This formula, with Nutri-Style Technology, helps strengthen hair and protect against heat styling damage up to 230 degrees. Hair is nourished so you can enjoy soft and smooth hair. DIRECTIONS: Spray onto damp hair before blow drying, or mist onto sections of dry hair if straight ironing or curling. For best results apply after using your favourite Dove shampoo and conditioner."
                 },
                 {
-                "title": "Sample product 1",
-                "imageName": "Product1.jpg",
-                "description": "lorem ipsum"
+                "title": "Dove Pure Care Dry Oil Nourishing Treatment with African Macadamia Oil",
+                "imageName": "dove_pure_care_dry_oil.png",
+                "description": "Suitable for all hair types, the Pure Care Dry Oil Nourishing Treatment with African Macadamia Oil is a lightweight, luxurious formula, infused with pure drops of natural oils. With unique Dry Oil technology, it absorbs deep into hair, giving you sublimely soft hair that is not greasy or weighed down."
                 },
              ],
     "description": "Hair products",
