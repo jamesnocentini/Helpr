@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093DA31B1992627C00BB4683 /* ProductsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */; };
+		093DA31E1992638D00BB4683 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA31D1992638D00BB4683 /* ProductTableViewCell.m */; };
+		093DA3211992681300BB4683 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA3201992681300BB4683 /* Product.m */; };
 		BE30A94F1992447600BF3351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A94E1992447600BF3351 /* AppDelegate.swift */; };
 		BE30A9511992447600BF3351 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A9501992447600BF3351 /* ViewController.swift */; };
 		BE30A9541992447600BF3351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE30A9521992447600BF3351 /* Main.storyboard */; };
@@ -25,6 +28,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		093DA3181992627C00BB4683 /* Helpr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Helpr-Bridging-Header.h"; sourceTree = "<group>"; };
+		093DA3191992627C00BB4683 /* ProductsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsListTableViewController.h; sourceTree = "<group>"; };
+		093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsListTableViewController.m; sourceTree = "<group>"; };
+		093DA31C1992638D00BB4683 /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
+		093DA31D1992638D00BB4683 /* ProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductTableViewCell.m; sourceTree = "<group>"; };
+		093DA31F1992681300BB4683 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		093DA3201992681300BB4683 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		BE30A9491992447600BF3351 /* Helpr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE30A94D1992447600BF3351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE30A94E1992447600BF3351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,10 +86,17 @@
 			isa = PBXGroup;
 			children = (
 				BE30A94E1992447600BF3351 /* AppDelegate.swift */,
-				BE30A9501992447600BF3351 /* ViewController.swift */,
-				BE30A9521992447600BF3351 /* Main.storyboard */,
+				093DA3181992627C00BB4683 /* Helpr-Bridging-Header.h */,
 				BE30A9551992447600BF3351 /* Images.xcassets */,
+				BE30A9521992447600BF3351 /* Main.storyboard */,
+				093DA31F1992681300BB4683 /* Product.h */,
+				093DA3201992681300BB4683 /* Product.m */,
+				093DA3191992627C00BB4683 /* ProductsListTableViewController.h */,
+				093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */,
+				093DA31C1992638D00BB4683 /* ProductTableViewCell.h */,
+				093DA31D1992638D00BB4683 /* ProductTableViewCell.m */,
 				BE30A94C1992447600BF3351 /* Supporting Files */,
+				BE30A9501992447600BF3351 /* ViewController.swift */,
 			);
 			path = Helpr;
 			sourceTree = "<group>";
@@ -209,7 +226,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE30A9511992447600BF3351 /* ViewController.swift in Sources */,
+				093DA3211992681300BB4683 /* Product.m in Sources */,
+				093DA31E1992638D00BB4683 /* ProductTableViewCell.m in Sources */,
 				BE30A94F1992447600BF3351 /* AppDelegate.swift in Sources */,
+				093DA31B1992627C00BB4683 /* ProductsListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,10 +345,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Helpr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Helpr/Helpr-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -338,10 +361,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Helpr/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Helpr/Helpr-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -399,6 +424,7 @@
 				BE30A9671992447600BF3351 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE30A9681992447600BF3351 /* Build configuration list for PBXNativeTarget "HelprTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +433,7 @@
 				BE30A96A1992447600BF3351 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
