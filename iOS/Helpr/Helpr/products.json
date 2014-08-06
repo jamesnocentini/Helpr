@@ -63,6 +63,8 @@
                  "imageName": "domestos.jpg",
                  "description": "Kills all known germs dead leaving your toilet white and sparkling. Certified by RSPH Royal Society for Public Health. Domestos Extended Germ Kill Ultra White & Sparkle"
                  }
-    ]
+    ],
+    "description": "Kitchen products",
+    "beacon_id": "2"
  }
 ]
