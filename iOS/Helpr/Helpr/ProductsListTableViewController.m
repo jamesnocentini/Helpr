@@ -9,7 +9,23 @@
 #import "ProductsListTableViewController.h"
 #import "ProductTableViewCell.h"
 #import "Product.h"
+#import "ProductCategory.h"
 #import "ProductDetailsViewController.h"
+
+@interface NSArray (myTransformingAddition)
+-(NSArray*)transformWithBlock:(id(^)(id))block;
+@end
+
+@implementation NSArray (myTransformingAddition)
+-(NSArray*)transformWithBlock:(id(^)(id))block{
+    NSMutableArray*result=[NSMutableArray array];
+    for(id x in self){
+        if (x)
+            [result addObject:block(x)];
+    }
+    return result;
+}
+@end
 
 @interface ProductsListTableViewController ()
 
@@ -17,7 +33,7 @@
 
 @implementation ProductsListTableViewController
 {
-    NSMutableArray * _products;
+    NSMutableArray * _categories;
 }
 
 +(NSDictionary*) fromJsonFile:(NSString*)fileLocation {
@@ -33,13 +49,13 @@
 
 - (void)loadProducts{
     
-    NSArray* jsonProducts = [ProductsListTableViewController fromJsonFile:@"products.json"];
+    NSArray* jsonCategories = [ProductsListTableViewController fromJsonFile:@"products.json"];
     
-    _products = [[NSMutableArray alloc]initWithCapacity:20];
+    _categories = [[NSMutableArray alloc]initWithCapacity:20];
     
-    for (NSDictionary* jsonProduct in jsonProducts) {
-        Product* product = [[Product alloc]initFromJson: jsonProduct];
-        [_products addObject:product];
+    for (NSDictionary* jsonCategory in jsonCategories) {
+        ProductCategory* category = [[ProductCategory alloc]initFromJson: jsonCategory];
+        [_categories addObject:category];
     }
 }
 
@@ -53,6 +69,50 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Filter"
+                                                                             style:UIBarButtonItemStylePlain
+                                                                            target:self
+                                                                            action:@selector(filterTableView)];
+
+}
+
+-(void)showPopUpWithTitle:(NSString*)popupTitle withOption:(NSArray*)arrOptions xy:(CGPoint)point size:(CGSize)size isMultiple:(BOOL)isMultiple{
+    
+    Dropobj = [[DropDownListView alloc] initWithTitle:popupTitle options:arrOptions xy:point size:size isMultiple:isMultiple];
+    Dropobj.delegate = self;
+    [Dropobj showInView:self.view animated:YES];
+    
+    [Dropobj SetBackGroundDropDwon_R:0.0 G:108.0 B:194.0 alpha:0.70];
+}
+
+- (void)DropDownListView:(DropDownListView *)dropdownListView didSelectedIndex:(NSInteger)anIndex {
+}
+
+- (void)DropDownListView:(DropDownListView *)dropdownListView Datalist:(NSMutableArray*)data {
+}
+
+- (void)DropDownListViewDidCancel{
+    
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *touch = [touches anyObject];
+    
+    if ([touch.view isKindOfClass:[UIView class]]) {
+        [Dropobj fadeOut];
+    }
+}
+
+- (void)filterTableView {
+
+    NSArray* categoryNames = [_categories transformWithBlock:^id(id o) {
+        return ((ProductCategory*)o).title;
+    }];
+
+    
+    [Dropobj fadeOut];
+    [self showPopUpWithTitle:@"Select Categories" withOption:categoryNames xy:CGPointMake(16, 58) size:CGSizeMake(287, 330) isMultiple:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,23 +124,33 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 1;
+    return _categories.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return _products.count;
+    ProductCategory* category = _categories[section];
+    
+    return category.products.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ProductTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"productCell" forIndexPath:indexPath];
     
-    Product* product = _products[indexPath.row];
+    ProductCategory* category = _categories[indexPath.section];
+    Product* product = category.products[indexPath.row];
     
     [cell setProduct:product];
     
     return cell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    ProductCategory* category = _categories[section];
+
+    return category.title;
 }
 
 /*
@@ -128,9 +198,11 @@
 //    UITableViewCell* cell = (UITableViewCell*)sender;
 //    NSIndexPath* path = [self.tableView indexPathForCell: cell];
     
-    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 
-    Product* product = _products[path.row];
+    ProductCategory* category = _categories[indexPath.section];
+    Product* product = category.products[indexPath.row];
+    
     [destination setProduct:product];
     
     // Get the new view controller using [segue destinationViewController].

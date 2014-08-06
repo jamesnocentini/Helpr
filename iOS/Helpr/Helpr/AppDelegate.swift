@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-        // Override point for customization after application launch.
+        RangingManager.defaultInstance().startForUuid("A0B13730-3A9A-11E3-AA6E-0800200C9A66")
         return true
     }
 

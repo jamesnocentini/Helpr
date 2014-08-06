@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0914A63E1992897B00631DB0 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A63D1992897B00631DB0 /* Category.m */; };
+		0914A63E1992897B00631DB0 /* ProductCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A63D1992897B00631DB0 /* ProductCategory.m */; };
+		0914A6481992A71900631DB0 /* biotex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0914A63F1992A71900631DB0 /* biotex.jpg */; };
+		0914A6491992A71900631DB0 /* cif.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6401992A71900631DB0 /* cif.jpg */; };
+		0914A64A1992A71900631DB0 /* domestos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6411992A71900631DB0 /* domestos.jpg */; };
+		0914A64B1992A71900631DB0 /* dove_heat_protect_spray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6421992A71900631DB0 /* dove_heat_protect_spray.jpg */; };
+		0914A64C1992A71900631DB0 /* dove_pure_care_dry_oil.png in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6431992A71900631DB0 /* dove_pure_care_dry_oil.png */; };
+		0914A64D1992A71900631DB0 /* intensive_whitening_soap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6441992A71900631DB0 /* intensive_whitening_soap.jpg */; };
+		0914A64E1992A71900631DB0 /* lynx_2in1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6451992A71900631DB0 /* lynx_2in1.png */; };
+		0914A64F1992A71900631DB0 /* lynx_messy_look.png in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6461992A71900631DB0 /* lynx_messy_look.png */; };
+		0914A6501992A71900631DB0 /* lynx_peace.png in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6471992A71900631DB0 /* lynx_peace.png */; };
 		093DA31B1992627C00BB4683 /* ProductsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */; };
 		093DA31E1992638D00BB4683 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA31D1992638D00BB4683 /* ProductTableViewCell.m */; };
 		093DA3211992681300BB4683 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA3201992681300BB4683 /* Product.m */; };
 		093DA32419926C0E00BB4683 /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA32319926C0E00BB4683 /* ProductDetailsViewController.m */; };
 		093DA3261992704A00BB4683 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 093DA3251992704A00BB4683 /* products.json */; };
 		093DA327199281A300BB4683 /* OpenTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE2519926BAD00EFD9AE /* OpenTok.framework */; };
+		09FFCE831992B3B500999E27 /* RangingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FFCE821992B3B500999E27 /* RangingManager.m */; };
+		09FFCE9E1992BED200999E27 /* check_mark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09FFCE971992BED200999E27 /* check_mark@2x.png */; };
+		09FFCE9F1992BED200999E27 /* done@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09FFCE981992BED200999E27 /* done@2x.png */; };
+		09FFCEA01992BED200999E27 /* drop_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09FFCE991992BED200999E27 /* drop_down@2x.png */; };
+		09FFCEA11992BED200999E27 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FFCE9B1992BED200999E27 /* DropDownListView.m */; };
+		09FFCEA21992BED200999E27 /* DropDownViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FFCE9D1992BED200999E27 /* DropDownViewCell.m */; };
 		BE30A94F1992447600BF3351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A94E1992447600BF3351 /* AppDelegate.swift */; };
 		BE30A9511992447600BF3351 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A9501992447600BF3351 /* ViewController.swift */; };
 		BE30A9541992447600BF3351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE30A9521992447600BF3351 /* Main.storyboard */; };
@@ -49,8 +64,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0914A63C1992897B00631DB0 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
-		0914A63D1992897B00631DB0 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		0914A63C1992897B00631DB0 /* ProductCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategory.h; sourceTree = "<group>"; };
+		0914A63D1992897B00631DB0 /* ProductCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategory.m; sourceTree = "<group>"; };
+		0914A63F1992A71900631DB0 /* biotex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = biotex.jpg; sourceTree = "<group>"; };
+		0914A6401992A71900631DB0 /* cif.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cif.jpg; sourceTree = "<group>"; };
+		0914A6411992A71900631DB0 /* domestos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = domestos.jpg; sourceTree = "<group>"; };
+		0914A6421992A71900631DB0 /* dove_heat_protect_spray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dove_heat_protect_spray.jpg; sourceTree = "<group>"; };
+		0914A6431992A71900631DB0 /* dove_pure_care_dry_oil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dove_pure_care_dry_oil.png; sourceTree = "<group>"; };
+		0914A6441992A71900631DB0 /* intensive_whitening_soap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intensive_whitening_soap.jpg; sourceTree = "<group>"; };
+		0914A6451992A71900631DB0 /* lynx_2in1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lynx_2in1.png; sourceTree = "<group>"; };
+		0914A6461992A71900631DB0 /* lynx_messy_look.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lynx_messy_look.png; sourceTree = "<group>"; };
+		0914A6471992A71900631DB0 /* lynx_peace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lynx_peace.png; sourceTree = "<group>"; };
 		093DA3191992627C00BB4683 /* ProductsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsListTableViewController.h; sourceTree = "<group>"; };
 		093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsListTableViewController.m; sourceTree = "<group>"; };
 		093DA31C1992638D00BB4683 /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
@@ -60,6 +84,15 @@
 		093DA32219926C0E00BB4683 /* ProductDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailsViewController.h; sourceTree = "<group>"; };
 		093DA32319926C0E00BB4683 /* ProductDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailsViewController.m; sourceTree = "<group>"; };
 		093DA3251992704A00BB4683 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		09FFCE811992B3B500999E27 /* RangingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RangingManager.h; sourceTree = "<group>"; };
+		09FFCE821992B3B500999E27 /* RangingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RangingManager.m; sourceTree = "<group>"; };
+		09FFCE971992BED200999E27 /* check_mark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check_mark@2x.png"; sourceTree = "<group>"; };
+		09FFCE981992BED200999E27 /* done@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done@2x.png"; sourceTree = "<group>"; };
+		09FFCE991992BED200999E27 /* drop_down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "drop_down@2x.png"; sourceTree = "<group>"; };
+		09FFCE9A1992BED200999E27 /* DropDownListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownListView.h; sourceTree = "<group>"; };
+		09FFCE9B1992BED200999E27 /* DropDownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownListView.m; sourceTree = "<group>"; };
+		09FFCE9C1992BED200999E27 /* DropDownViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownViewCell.h; sourceTree = "<group>"; };
+		09FFCE9D1992BED200999E27 /* DropDownViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownViewCell.m; sourceTree = "<group>"; };
 		BE30A9491992447600BF3351 /* Helpr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE30A94D1992447600BF3351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE30A94E1992447600BF3351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +158,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0914A6511992A72800631DB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0914A63F1992A71900631DB0 /* biotex.jpg */,
+				0914A6401992A71900631DB0 /* cif.jpg */,
+				0914A6411992A71900631DB0 /* domestos.jpg */,
+				0914A6421992A71900631DB0 /* dove_heat_protect_spray.jpg */,
+				0914A6431992A71900631DB0 /* dove_pure_care_dry_oil.png */,
+				0914A6441992A71900631DB0 /* intensive_whitening_soap.jpg */,
+				0914A6451992A71900631DB0 /* lynx_2in1.png */,
+				0914A6461992A71900631DB0 /* lynx_messy_look.png */,
+				0914A6471992A71900631DB0 /* lynx_peace.png */,
+				093DA3251992704A00BB4683 /* products.json */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09FFCE841992B66100999E27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				093DA31F1992681300BB4683 /* Product.h */,
+				093DA3201992681300BB4683 /* Product.m */,
+				0914A63C1992897B00631DB0 /* ProductCategory.h */,
+				0914A63D1992897B00631DB0 /* ProductCategory.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		09FFCE851992B66F00999E27 /* iBeacon */ = {
+			isa = PBXGroup;
+			children = (
+				09FFCE811992B3B500999E27 /* RangingManager.h */,
+				09FFCE821992B3B500999E27 /* RangingManager.m */,
+			);
+			name = iBeacon;
+			sourceTree = "<group>";
+		};
+		09FFCEA31992BEDB00999E27 /* kDropDown */ = {
+			isa = PBXGroup;
+			children = (
+				09FFCE971992BED200999E27 /* check_mark@2x.png */,
+				09FFCE981992BED200999E27 /* done@2x.png */,
+				09FFCE991992BED200999E27 /* drop_down@2x.png */,
+				09FFCE9A1992BED200999E27 /* DropDownListView.h */,
+				09FFCE9B1992BED200999E27 /* DropDownListView.m */,
+				09FFCE9C1992BED200999E27 /* DropDownViewCell.h */,
+				09FFCE9D1992BED200999E27 /* DropDownViewCell.m */,
+			);
+			name = kDropDown;
+			sourceTree = "<group>";
+		};
 		BE30A9401992447500BF3351 = {
 			isa = PBXGroup;
 			children = (
@@ -148,24 +232,23 @@
 		BE30A94B1992447600BF3351 /* Helpr */ = {
 			isa = PBXGroup;
 			children = (
-				093DA3251992704A00BB4683 /* products.json */,
-				BE70BE2519926BAD00EFD9AE /* OpenTok.framework */,
+				09FFCEA31992BEDB00999E27 /* kDropDown */,
 				BE30A94E1992447600BF3351 /* AppDelegate.swift */,
+				09FFCE851992B66F00999E27 /* iBeacon */,
 				BE30A9551992447600BF3351 /* Images.xcassets */,
-				BE70BE231992698700EFD9AE /* VideoViewController.swift */,
 				BE30A9521992447600BF3351 /* Main.storyboard */,
-				093DA31F1992681300BB4683 /* Product.h */,
-				093DA3201992681300BB4683 /* Product.m */,
+				09FFCE841992B66100999E27 /* Model */,
+				BE70BE2519926BAD00EFD9AE /* OpenTok.framework */,
 				093DA32219926C0E00BB4683 /* ProductDetailsViewController.h */,
 				093DA32319926C0E00BB4683 /* ProductDetailsViewController.m */,
+				0914A6511992A72800631DB0 /* Products */,
 				093DA3191992627C00BB4683 /* ProductsListTableViewController.h */,
 				093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */,
 				093DA31C1992638D00BB4683 /* ProductTableViewCell.h */,
 				093DA31D1992638D00BB4683 /* ProductTableViewCell.m */,
 				BE30A94C1992447600BF3351 /* Supporting Files */,
+				BE70BE231992698700EFD9AE /* VideoViewController.swift */,
 				BE30A9501992447600BF3351 /* ViewController.swift */,
-				0914A63C1992897B00631DB0 /* Category.h */,
-				0914A63D1992897B00631DB0 /* Category.m */,
 			);
 			path = Helpr;
 			sourceTree = "<group>";
@@ -298,9 +381,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FFCE9F1992BED200999E27 /* done@2x.png in Resources */,
+				09FFCEA01992BED200999E27 /* drop_down@2x.png in Resources */,
+				09FFCE9E1992BED200999E27 /* check_mark@2x.png in Resources */,
+				0914A6481992A71900631DB0 /* biotex.jpg in Resources */,
+				0914A64C1992A71900631DB0 /* dove_pure_care_dry_oil.png in Resources */,
 				093DA3261992704A00BB4683 /* products.json in Resources */,
+				0914A64D1992A71900631DB0 /* intensive_whitening_soap.jpg in Resources */,
+				0914A64F1992A71900631DB0 /* lynx_messy_look.png in Resources */,
+				0914A6501992A71900631DB0 /* lynx_peace.png in Resources */,
 				BE30A9541992447600BF3351 /* Main.storyboard in Resources */,
+				0914A6491992A71900631DB0 /* cif.jpg in Resources */,
+				0914A64B1992A71900631DB0 /* dove_heat_protect_spray.jpg in Resources */,
 				BE30A9561992447600BF3351 /* Images.xcassets in Resources */,
+				0914A64E1992A71900631DB0 /* lynx_2in1.png in Resources */,
+				0914A64A1992A71900631DB0 /* domestos.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,10 +416,13 @@
 				BE30A9511992447600BF3351 /* ViewController.swift in Sources */,
 				093DA3211992681300BB4683 /* Product.m in Sources */,
 				093DA31E1992638D00BB4683 /* ProductTableViewCell.m in Sources */,
-				0914A63E1992897B00631DB0 /* Category.m in Sources */,
+				09FFCEA11992BED200999E27 /* DropDownListView.m in Sources */,
+				0914A63E1992897B00631DB0 /* ProductCategory.m in Sources */,
 				093DA32419926C0E00BB4683 /* ProductDetailsViewController.m in Sources */,
 				BE30A94F1992447600BF3351 /* AppDelegate.swift in Sources */,
 				093DA31B1992627C00BB4683 /* ProductsListTableViewController.m in Sources */,
+				09FFCE831992B3B500999E27 /* RangingManager.m in Sources */,
+				09FFCEA21992BED200999E27 /* DropDownViewCell.m in Sources */,
 				BE70BE241992698700EFD9AE /* VideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

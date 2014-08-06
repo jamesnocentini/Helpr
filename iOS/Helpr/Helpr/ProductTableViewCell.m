@@ -36,6 +36,10 @@
     {
         self.Title.text = _product.title;
         
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:[product.imageName stringByDeletingPathExtension] ofType:[product.imageName pathExtension]];
+
+        UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+        self.Image.image = image;
     }
 }
 

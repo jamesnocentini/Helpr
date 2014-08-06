@@ -1,16 +1,6 @@
 [
- "make_up": {
-    "products":[
-                    {
-                        "title": "Sample product 1",
-                        "imageName": "Product1.jpg",
-                        "description": "lorem ipsum"
-                    }
-                ],
-    "description": "This is all make up stuff",
-    "beacon_id": "1"
-    },
- "hair": {
+ {
+    "id": "hair",
     "products":[
                 {
                 "title": "Lynx Peace",
@@ -29,24 +19,25 @@
                 },
                 {
                 "title": "Dove Heat Protect Spray",
-                "imageName": "dove_heat_product_spray.jpg",
+                "imageName": "dove_heat_protect_spray.jpg",
                 "description": "This formula, with Nutri-Style Technology, helps strengthen hair and protect against heat styling damage up to 230 degrees. Hair is nourished so you can enjoy soft and smooth hair. DIRECTIONS: Spray onto damp hair before blow drying, or mist onto sections of dry hair if straight ironing or curling. For best results apply after using your favourite Dove shampoo and conditioner."
                 },
                 {
                 "title": "Dove Pure Care Dry Oil Nourishing Treatment with African Macadamia Oil",
                 "imageName": "dove_pure_care_dry_oil.png",
                 "description": "Suitable for all hair types, the Pure Care Dry Oil Nourishing Treatment with African Macadamia Oil is a lightweight, luxurious formula, infused with pure drops of natural oils. With unique Dry Oil technology, it absorbs deep into hair, giving you sublimely soft hair that is not greasy or weighed down."
-                },
+                }
              ],
     "description": "Hair products",
     "beacon_id": "2"
  },
- "kitchen": {
+ {
+ "id" : "kitchen",
     "products": [
                  {
-                 "title": "Biotex Stain Removing Powder (500g)"
+                 "title": "Biotex Stain Removing Powder (500g)",
                  "imageName": "biotex.jpg",
-                 "description": "Benefit from the power of soaking with Bio-tex Stain Removing Powder. Bio-tex removes the ground-in dirt and grime that normal machine washing usually leaves behind. The Bleach Free powder gently softens and loosens even the most stubborn stains such as stains of grass, milk, blood, egg, grease and chocolate. Bio-tex brightens without the use of of bleach. On Colors, the Bleach Free formulation is safe and just as effective."
+                 "description": "Benefit from the power of soaking with Bio-tex Stain Removing Powder. Bio-tex removes the ground-in dirt and grime that normal machine washing usually leaves behind. The Bleach Free powder gently softens and loosens even the most stubborn stains such as stains of grass, milk, blood, egg, grease and chocolate. Bio-tex  brightens without the use of of bleach. On Colors, the Bleach Free formulation is safe and just as effective."
                  },
                  {
                  "title": "Intensive Whitening Soap with Whitening Essentials 80g Small Bar",
