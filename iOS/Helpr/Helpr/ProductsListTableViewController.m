@@ -9,6 +9,7 @@
 #import "ProductsListTableViewController.h"
 #import "ProductTableViewCell.h"
 #import "Product.h"
+#import "ProductCategory.h"
 #import "ProductDetailsViewController.h"
 
 @interface ProductsListTableViewController ()
@@ -17,7 +18,7 @@
 
 @implementation ProductsListTableViewController
 {
-    NSMutableArray * _products;
+    NSMutableArray * _categories;
 }
 
 +(NSDictionary*) fromJsonFile:(NSString*)fileLocation {
@@ -33,13 +34,13 @@
 
 - (void)loadProducts{
     
-    NSArray* jsonProducts = [ProductsListTableViewController fromJsonFile:@"products.json"];
+    NSArray* jsonCategories = [ProductsListTableViewController fromJsonFile:@"products.json"];
     
-    _products = [[NSMutableArray alloc]initWithCapacity:20];
+    _categories = [[NSMutableArray alloc]initWithCapacity:20];
     
-    for (NSDictionary* jsonProduct in jsonProducts) {
-        Product* product = [[Product alloc]initFromJson: jsonProduct];
-        [_products addObject:product];
+    for (NSDictionary* jsonCategory in jsonCategories) {
+        ProductCategory* category = [[ProductCategory alloc]initFromJson: jsonCategory];
+        [_categories addObject:category];
     }
 }
 
@@ -64,19 +65,22 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 1;
+    return _categories.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return _products.count;
+    ProductCategory* category = _categories[section];
+    
+    return category.products.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     ProductTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"productCell" forIndexPath:indexPath];
     
-    Product* product = _products[indexPath.row];
+    ProductCategory* category = _categories[indexPath.section];
+    Product* product = category.products[indexPath.row];
     
     [cell setProduct:product];
     
@@ -128,9 +132,11 @@
 //    UITableViewCell* cell = (UITableViewCell*)sender;
 //    NSIndexPath* path = [self.tableView indexPathForCell: cell];
     
-    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 
-    Product* product = _products[path.row];
+    ProductCategory* category = _categories[indexPath.section];
+    Product* product = category.products[indexPath.row];
+    
     [destination setProduct:product];
     
     // Get the new view controller using [segue destinationViewController].

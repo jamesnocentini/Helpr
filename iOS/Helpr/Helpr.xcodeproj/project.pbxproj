@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0914A63E1992897B00631DB0 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A63D1992897B00631DB0 /* Category.m */; };
+		0914A63E1992897B00631DB0 /* ProductCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A63D1992897B00631DB0 /* ProductCategory.m */; };
 		093DA31B1992627C00BB4683 /* ProductsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */; };
 		093DA31E1992638D00BB4683 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA31D1992638D00BB4683 /* ProductTableViewCell.m */; };
 		093DA3211992681300BB4683 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA3201992681300BB4683 /* Product.m */; };
@@ -49,8 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0914A63C1992897B00631DB0 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
-		0914A63D1992897B00631DB0 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		0914A63C1992897B00631DB0 /* ProductCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategory.h; sourceTree = "<group>"; };
+		0914A63D1992897B00631DB0 /* ProductCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategory.m; sourceTree = "<group>"; };
 		093DA3191992627C00BB4683 /* ProductsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsListTableViewController.h; sourceTree = "<group>"; };
 		093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsListTableViewController.m; sourceTree = "<group>"; };
 		093DA31C1992638D00BB4683 /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
@@ -148,24 +148,24 @@
 		BE30A94B1992447600BF3351 /* Helpr */ = {
 			isa = PBXGroup;
 			children = (
-				093DA3251992704A00BB4683 /* products.json */,
-				BE70BE2519926BAD00EFD9AE /* OpenTok.framework */,
 				BE30A94E1992447600BF3351 /* AppDelegate.swift */,
 				BE30A9551992447600BF3351 /* Images.xcassets */,
-				BE70BE231992698700EFD9AE /* VideoViewController.swift */,
 				BE30A9521992447600BF3351 /* Main.storyboard */,
+				BE70BE2519926BAD00EFD9AE /* OpenTok.framework */,
 				093DA31F1992681300BB4683 /* Product.h */,
 				093DA3201992681300BB4683 /* Product.m */,
+				0914A63C1992897B00631DB0 /* ProductCategory.h */,
+				0914A63D1992897B00631DB0 /* ProductCategory.m */,
 				093DA32219926C0E00BB4683 /* ProductDetailsViewController.h */,
 				093DA32319926C0E00BB4683 /* ProductDetailsViewController.m */,
+				093DA3251992704A00BB4683 /* products.json */,
 				093DA3191992627C00BB4683 /* ProductsListTableViewController.h */,
 				093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */,
 				093DA31C1992638D00BB4683 /* ProductTableViewCell.h */,
 				093DA31D1992638D00BB4683 /* ProductTableViewCell.m */,
 				BE30A94C1992447600BF3351 /* Supporting Files */,
+				BE70BE231992698700EFD9AE /* VideoViewController.swift */,
 				BE30A9501992447600BF3351 /* ViewController.swift */,
-				0914A63C1992897B00631DB0 /* Category.h */,
-				0914A63D1992897B00631DB0 /* Category.m */,
 			);
 			path = Helpr;
 			sourceTree = "<group>";
@@ -321,7 +321,7 @@
 				BE30A9511992447600BF3351 /* ViewController.swift in Sources */,
 				093DA3211992681300BB4683 /* Product.m in Sources */,
 				093DA31E1992638D00BB4683 /* ProductTableViewCell.m in Sources */,
-				0914A63E1992897B00631DB0 /* Category.m in Sources */,
+				0914A63E1992897B00631DB0 /* ProductCategory.m in Sources */,
 				093DA32419926C0E00BB4683 /* ProductDetailsViewController.m in Sources */,
 				BE30A94F1992447600BF3351 /* AppDelegate.swift in Sources */,
 				093DA31B1992627C00BB4683 /* ProductsListTableViewController.m in Sources */,
