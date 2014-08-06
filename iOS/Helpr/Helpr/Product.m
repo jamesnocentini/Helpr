@@ -19,6 +19,7 @@
     
     product.title = jsonProduct[@"title"];
     product.imageName = jsonProduct[@"imageName"];
+    product.productDescription = jsonProduct[@"description"];
     
     return product;
 }

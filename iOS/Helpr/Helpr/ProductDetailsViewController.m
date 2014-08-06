@@ -33,7 +33,13 @@
 
     if (_product)
     {
-        self.Title.text = _product.title;
+        self.productTitle.text = _product.title;
+        self.productDescription.text = _product.productDescription;
+
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:[_product.imageName stringByDeletingPathExtension] ofType:[_product.imageName pathExtension]];
+        
+        UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+        self.image.image = image;
     }
 }
 
