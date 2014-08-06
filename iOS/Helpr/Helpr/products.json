@@ -9,5 +9,36 @@
                 ],
     "description": "This is all make up stuff",
     "beacon_id": "1"
-    }
+    },
+ "hair": {
+    "products":[
+                {
+                "title": "Lynx Peace",
+                "imageName": "Lynx Peace.png",
+                "description": "Not content with bringing the world together, Lynx Peace is bringing shampoo and conditioner together to give you the slickest, softest hair – made for styling. With its undertones of violet, nutmeg, cedarwood and musk – this stuff truly has the power to unite. Lynx hair – get the look that gets the girl."
+                },
+                {
+                "title": "Sample product 1",
+                "imageName": "Product1.jpg",
+                "description": "lorem ipsum"
+                },
+                {
+                "title": "Sample product 1",
+                "imageName": "Product1.jpg",
+                "description": "lorem ipsum"
+                },
+                {
+                "title": "Sample product 1",
+                "imageName": "Product1.jpg",
+                "description": "lorem ipsum"
+                },
+                {
+                "title": "Sample product 1",
+                "imageName": "Product1.jpg",
+                "description": "lorem ipsum"
+                },
+             ],
+    "description": "Hair products",
+    "beacon_id": "2"
+ },
 ]
