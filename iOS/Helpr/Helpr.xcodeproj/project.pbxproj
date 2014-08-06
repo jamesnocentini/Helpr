@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0914A63E1992897B00631DB0 /* ProductCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0914A63D1992897B00631DB0 /* ProductCategory.m */; };
+		0914A6481992A71900631DB0 /* biotex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0914A63F1992A71900631DB0 /* biotex.jpg */; };
+		0914A6491992A71900631DB0 /* cif.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6401992A71900631DB0 /* cif.jpg */; };
+		0914A64A1992A71900631DB0 /* domestos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6411992A71900631DB0 /* domestos.jpg */; };
+		0914A64B1992A71900631DB0 /* dove_heat_protect_spray.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6421992A71900631DB0 /* dove_heat_protect_spray.jpg */; };
+		0914A64C1992A71900631DB0 /* dove_pure_care_dry_oil.png in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6431992A71900631DB0 /* dove_pure_care_dry_oil.png */; };
+		0914A64D1992A71900631DB0 /* intensive_whitening_soap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6441992A71900631DB0 /* intensive_whitening_soap.jpg */; };
+		0914A64E1992A71900631DB0 /* lynx_2in1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6451992A71900631DB0 /* lynx_2in1.png */; };
+		0914A64F1992A71900631DB0 /* lynx_messy_look.png in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6461992A71900631DB0 /* lynx_messy_look.png */; };
+		0914A6501992A71900631DB0 /* lynx_peace.png in Resources */ = {isa = PBXBuildFile; fileRef = 0914A6471992A71900631DB0 /* lynx_peace.png */; };
 		093DA31B1992627C00BB4683 /* ProductsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */; };
 		093DA31E1992638D00BB4683 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA31D1992638D00BB4683 /* ProductTableViewCell.m */; };
 		093DA3211992681300BB4683 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA3201992681300BB4683 /* Product.m */; };
@@ -51,6 +60,15 @@
 /* Begin PBXFileReference section */
 		0914A63C1992897B00631DB0 /* ProductCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCategory.h; sourceTree = "<group>"; };
 		0914A63D1992897B00631DB0 /* ProductCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCategory.m; sourceTree = "<group>"; };
+		0914A63F1992A71900631DB0 /* biotex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = biotex.jpg; sourceTree = "<group>"; };
+		0914A6401992A71900631DB0 /* cif.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cif.jpg; sourceTree = "<group>"; };
+		0914A6411992A71900631DB0 /* domestos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = domestos.jpg; sourceTree = "<group>"; };
+		0914A6421992A71900631DB0 /* dove_heat_protect_spray.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dove_heat_protect_spray.jpg; sourceTree = "<group>"; };
+		0914A6431992A71900631DB0 /* dove_pure_care_dry_oil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dove_pure_care_dry_oil.png; sourceTree = "<group>"; };
+		0914A6441992A71900631DB0 /* intensive_whitening_soap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intensive_whitening_soap.jpg; sourceTree = "<group>"; };
+		0914A6451992A71900631DB0 /* lynx_2in1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lynx_2in1.png; sourceTree = "<group>"; };
+		0914A6461992A71900631DB0 /* lynx_messy_look.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lynx_messy_look.png; sourceTree = "<group>"; };
+		0914A6471992A71900631DB0 /* lynx_peace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lynx_peace.png; sourceTree = "<group>"; };
 		093DA3191992627C00BB4683 /* ProductsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsListTableViewController.h; sourceTree = "<group>"; };
 		093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsListTableViewController.m; sourceTree = "<group>"; };
 		093DA31C1992638D00BB4683 /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductTableViewCell.h; sourceTree = "<group>"; };
@@ -125,6 +143,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0914A6511992A72800631DB0 /* products */ = {
+			isa = PBXGroup;
+			children = (
+				0914A63F1992A71900631DB0 /* biotex.jpg */,
+				0914A6401992A71900631DB0 /* cif.jpg */,
+				0914A6411992A71900631DB0 /* domestos.jpg */,
+				0914A6421992A71900631DB0 /* dove_heat_protect_spray.jpg */,
+				0914A6431992A71900631DB0 /* dove_pure_care_dry_oil.png */,
+				0914A6441992A71900631DB0 /* intensive_whitening_soap.jpg */,
+				0914A6451992A71900631DB0 /* lynx_2in1.png */,
+				0914A6461992A71900631DB0 /* lynx_messy_look.png */,
+				0914A6471992A71900631DB0 /* lynx_peace.png */,
+				093DA3251992704A00BB4683 /* products.json */,
+			);
+			name = products;
+			sourceTree = "<group>";
+		};
 		BE30A9401992447500BF3351 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +183,7 @@
 		BE30A94B1992447600BF3351 /* Helpr */ = {
 			isa = PBXGroup;
 			children = (
+				0914A6511992A72800631DB0 /* products */,
 				BE30A94E1992447600BF3351 /* AppDelegate.swift */,
 				BE30A9551992447600BF3351 /* Images.xcassets */,
 				BE30A9521992447600BF3351 /* Main.storyboard */,
@@ -158,7 +194,6 @@
 				0914A63D1992897B00631DB0 /* ProductCategory.m */,
 				093DA32219926C0E00BB4683 /* ProductDetailsViewController.h */,
 				093DA32319926C0E00BB4683 /* ProductDetailsViewController.m */,
-				093DA3251992704A00BB4683 /* products.json */,
 				093DA3191992627C00BB4683 /* ProductsListTableViewController.h */,
 				093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */,
 				093DA31C1992638D00BB4683 /* ProductTableViewCell.h */,
@@ -298,9 +333,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0914A6481992A71900631DB0 /* biotex.jpg in Resources */,
+				0914A64C1992A71900631DB0 /* dove_pure_care_dry_oil.png in Resources */,
 				093DA3261992704A00BB4683 /* products.json in Resources */,
+				0914A64D1992A71900631DB0 /* intensive_whitening_soap.jpg in Resources */,
+				0914A64F1992A71900631DB0 /* lynx_messy_look.png in Resources */,
+				0914A6501992A71900631DB0 /* lynx_peace.png in Resources */,
 				BE30A9541992447600BF3351 /* Main.storyboard in Resources */,
+				0914A6491992A71900631DB0 /* cif.jpg in Resources */,
+				0914A64B1992A71900631DB0 /* dove_heat_protect_spray.jpg in Resources */,
 				BE30A9561992447600BF3351 /* Images.xcassets in Resources */,
+				0914A64E1992A71900631DB0 /* lynx_2in1.png in Resources */,
+				0914A64A1992A71900631DB0 /* domestos.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
