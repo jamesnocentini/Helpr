@@ -20,15 +20,34 @@
     NSMutableArray * _products;
 }
 
++(NSDictionary*) fromJsonFile:(NSString*)fileLocation {
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:[fileLocation stringByDeletingPathExtension] ofType:[fileLocation pathExtension]];
+    NSData* data = [NSData dataWithContentsOfFile:filePath];
+    __autoreleasing NSError* error = nil;
+    id result = [NSJSONSerialization JSONObjectWithData:data
+                                                options:kNilOptions error:&error];
+    if (error != nil) return nil;
+    return result;
+}
+
+- (void)loadProducts{
+    
+    NSArray* jsonProducts = [ProductsListTableViewController fromJsonFile:@"products.json"];
+    
+    _products = [[NSMutableArray alloc]initWithCapacity:20];
+    
+    for (NSDictionary* jsonProduct in jsonProducts) {
+        Product* product = [[Product alloc]initFromJson: jsonProduct];
+        [_products addObject:product];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _products = [[NSMutableArray alloc] initWithCapacity:20];
+    [self loadProducts];
 
-    Product* sampleProduct = [[Product alloc]init];
-    sampleProduct.title = @"Sample product";
-    
-    [_products addObject:sampleProduct];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

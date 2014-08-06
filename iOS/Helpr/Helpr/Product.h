@@ -10,6 +10,8 @@
 
 @interface Product : NSObject
 
+- (Product*) initFromJson:(NSDictionary*) jsonProduct;
+
 @property ( nonatomic, copy ) NSString *title;
 @property ( nonatomic, copy ) NSString *imageName;
 

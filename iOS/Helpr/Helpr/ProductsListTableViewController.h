@@ -10,4 +10,6 @@
 
 @interface ProductsListTableViewController : UITableViewController
 
+- (void)loadProducts;
+
 @end

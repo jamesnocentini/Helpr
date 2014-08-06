@@ -12,4 +12,15 @@
 {
     
 }
+
+- (Product*) initFromJson:(NSDictionary*)jsonProduct
+{
+    Product* product = [[Product alloc]init];
+    
+    product.title = jsonProduct[@"title"];
+    product.imageName = jsonProduct[@"imageName"];
+    
+    return product;
+}
+
 @end
