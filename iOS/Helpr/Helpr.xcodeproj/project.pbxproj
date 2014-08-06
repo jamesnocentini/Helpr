@@ -12,6 +12,7 @@
 		093DA3211992681300BB4683 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA3201992681300BB4683 /* Product.m */; };
 		093DA32419926C0E00BB4683 /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093DA32319926C0E00BB4683 /* ProductDetailsViewController.m */; };
 		093DA3261992704A00BB4683 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 093DA3251992704A00BB4683 /* products.json */; };
+		093DA327199281A300BB4683 /* OpenTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE2519926BAD00EFD9AE /* OpenTok.framework */; };
 		BE30A94F1992447600BF3351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A94E1992447600BF3351 /* AppDelegate.swift */; };
 		BE30A9511992447600BF3351 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A9501992447600BF3351 /* ViewController.swift */; };
 		BE30A9541992447600BF3351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE30A9521992447600BF3351 /* Main.storyboard */; };
@@ -34,7 +35,6 @@
 		BE70BE45199270F800EFD9AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE44199270F800EFD9AE /* Foundation.framework */; };
 		BE70BE471992710500EFD9AE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE461992710500EFD9AE /* QuartzCore.framework */; };
 		BE70BE4B1992755900EFD9AE /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE4A1992755900EFD9AE /* GLKit.framework */; };
-		BE70BE4D19927F0300EFD9AE /* OpenTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE2519926BAD00EFD9AE /* OpenTok.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE70BE4D19927F0300EFD9AE /* OpenTok.framework in Frameworks */,
+				093DA327199281A300BB4683 /* OpenTok.framework in Frameworks */,
 				BE70BE4B1992755900EFD9AE /* GLKit.framework in Frameworks */,
 				BE70BE2B19926F6E00EFD9AE /* libxml2.dylib in Frameworks */,
 				BE70BE2D19926F7700EFD9AE /* libpthread.dylib in Frameworks */,

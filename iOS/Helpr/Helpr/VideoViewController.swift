@@ -78,7 +78,7 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
         
         var maybeError : OTError?
         session?.publish(publisher, error: &maybeError)
-        if let error = maybeError as? OTError {
+        if let error = maybeError {
             showAlert(error.localizedDescription)
         }
         

@@ -125,9 +125,11 @@
     
     ProductDetailsViewController* destination = [segue destinationViewController];
     
-    UITableViewCell* cell = (UITableViewCell*)sender;
-    NSIndexPath* path = [self.tableView indexPathForCell: cell];
+//    UITableViewCell* cell = (UITableViewCell*)sender;
+//    NSIndexPath* path = [self.tableView indexPathForCell: cell];
     
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+
     Product* product = _products[path.row];
     [destination setProduct:product];
     

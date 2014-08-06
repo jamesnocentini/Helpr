@@ -24,6 +24,19 @@
     // Do any additional setup after loading the view.
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    
+    [self updateProductDetails];
+}
+
+- (void)updateProductDetails {
+
+    if (_product)
+    {
+        self.Title.text = _product.title;
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -48,10 +61,6 @@
 - (void)setProduct:(Product *)product {
     
     _product = product;
-    if (_product)
-    {
-        self.Title.text = _product.title;
-    }
 }
 
 @end
