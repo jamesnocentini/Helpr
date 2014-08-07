@@ -7,7 +7,7 @@
 //
 
 import UIKit
-let topMargin: CGFloat = 60.0 + 20.0
+let topMargin: CGFloat = 60.0 + 60.0
 let videoWidthMe: CGFloat = 320
 let videoHeightMe: CGFloat = 480
 let videoWidthThem: CGFloat = 150
@@ -36,6 +36,7 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
     var _product: Product?
     @IBOutlet var Image: UIImageView!
     @IBOutlet var Title: UILabel!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
         Title = UILabel(frame: CGRectZero)
@@ -69,6 +70,8 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
         // Step 2: As the view come into the foreground, begin the connection process
         doConnect()
         Title.text = _product!.title
+        
+        spinner.startAnimating()
 
         // Set the image
         var filePath = NSBundle.mainBundle().pathForResource(_product!.imageName.stringByDeletingPathExtension, ofType: _product!.imageName.pathExtension)

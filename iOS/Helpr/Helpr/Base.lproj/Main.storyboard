@@ -173,7 +173,7 @@
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PoT-po-q85">
-                                <rect key="frame" x="150" y="284" width="20" height="20"/>
+                                <rect key="frame" x="150" y="247" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -182,6 +182,7 @@
                     <connections>
                         <outlet property="Image" destination="u3K-Fm-bxF" id="JfR-jK-xHh"/>
                         <outlet property="Title" destination="kAo-j4-3r4" id="eL3-Kw-qVN"/>
+                        <outlet property="spinner" destination="PoT-po-q85" id="GCU-G8-UH3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbI-sF-uT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
