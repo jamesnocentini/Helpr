@@ -70,8 +70,14 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    VideoViewController* destination = [segue destinationViewController];
-    [destination setProduct:_product];
+    NSString* name = [[sender titleLabel] text];
+    if ([name  isEqual: @"Call Assistant"]) {
+
+    } else {
+        VideoViewController* destination = [segue destinationViewController];
+        [destination setProduct:_product];
+    }
+    
 }
 
 
