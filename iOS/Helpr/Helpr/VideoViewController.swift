@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
-let videoWidth: CGFloat = 320
-let videoHeight: CGFloat = 240
+let topMargin: CGFloat = 60.0 + 20.0
+let videoWidthMe: CGFloat = 320
+let videoHeightMe: CGFloat = 480
+let videoWidthThem: CGFloat = 150
+let videoHeightThem: CGFloat = 100
 
 let ApiKey = "44931602"
 let SessionID = "1_MX40NDkzMTYwMn5-V2VkIEF1ZyAwNiAwODowNDo0MCBQRFQgMjAxNH4wLjk0Nzg3MTF-fg"
@@ -17,6 +19,9 @@ let SessionID = "1_MX40NDkzMTYwMn5-V2VkIEF1ZyAwNiAwODowNDo0MCBQRFQgMjAxNH4wLjk0N
 let Token1 = "T1==cGFydG5lcl9pZD00NDkzMTYwMiZzaWc9NjZjYjY0MmVhMzgwYzViNzcyNzRlNjg3YjY2MWU2OTYxMWQ0ZGVjODpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTFfTVg0ME5Ea3pNVFl3TW41LVYyVmtJRUYxWnlBd05pQXdPRG93TkRvME1DQlFSRlFnTWpBeE5INHdMamswTnpnM01URi1mZyZjcmVhdGVfdGltZT0xNDA3MzM3NTA3Jm5vbmNlPTAuNDc0NDYxMTM5MjMyNTg4MTUmZXhwaXJlX3RpbWU9MTQwNzk0MDc4NQ=="
 
 let Token2 = "T1==cGFydG5lcl9pZD00NDkzMTYwMiZzaWc9OTEwYjBhMDA1YjlmMmVmNjAyMWIxOGYxMjUyM2NjZGYwN2E5MjI1ZTpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTFfTVg0ME5Ea3pNVFl3TW41LVYyVmtJRUYxWnlBd05pQXdPRG93TkRvME1DQlFSRlFnTWpBeE5INHdMamswTnpnM01URi1mZyZjcmVhdGVfdGltZT0xNDA3MzM3NTE2Jm5vbmNlPTAuNjIzMTE0NzYxODg4MDUxNCZleHBpcmVfdGltZT0xNDA3OTQwNzg1"
+
+let Token3 =
+"T1==cGFydG5lcl9pZD00NDkzMTYwMiZzaWc9YTZhOTg2MWE4ZWY0NDU3OTA0NmYxOGJhYWZiYmNhNTYxNjQ2N2MwODpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTFfTVg0ME5Ea3pNVFl3TW41LVYyVmtJRUYxWnlBd05pQXdPRG93TkRvME1DQlFSRlFnTWpBeE5INHdMamswTnpnM01URi1mZyZjcmVhdGVfdGltZT0xNDA3MzY1MjY2Jm5vbmNlPTAuMzMxMDI3NzY2NDk4NDg3MSZleHBpcmVfdGltZT0xNDA3OTcwMDU3"
 
 var Token = ""
 
@@ -28,15 +33,32 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
     var session: OTSession?
     var publisher: OTPublisher?
     var subscriber: OTSubscriber?
+    var _product: Product?
+    @IBOutlet var Image: UIImageView!
+    @IBOutlet var Title: UILabel!
+    
+    init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+        Title = UILabel(frame: CGRectZero)
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+    }
+    
+    func setProduct(product: Product) {
+        _product = product
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if UIDevice.currentDevice().name == "Petroff" {
-
             Token = Token1
-        } else {
+        } else if UIDevice.currentDevice().name == "James Nocentini's iPad" {
             Token = Token2
+        } else {
+            Token = Token3
         }
         
         // Step 1: As the view is loaded initialize a new instance of OTSession
@@ -46,11 +68,18 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
     override func viewWillAppear(animated: Bool) {
         // Step 2: As the view come into the foreground, begin the connection process
         doConnect()
+        Title.text = _product!.title
+
+        // Set the image
+        var filePath = NSBundle.mainBundle().pathForResource(_product!.imageName.stringByDeletingPathExtension, ofType: _product!.imageName.pathExtension)
+        println(filePath)
+        var image = UIImage(contentsOfFile: filePath)
+        Image.image = image
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+//    override func prefersStatusBarHidden() -> Bool {
+//        return true
+//    }
     
     // MARK: - OpenTok Methods
     
@@ -83,7 +112,7 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
         }
         
         view.addSubview(publisher!.view)
-        publisher!.view.frame = CGRect(x: 0.0, y: 0, width: videoWidth, height: videoHeight)
+        publisher!.view.frame = CGRect(x: 160, y: 370, width: videoWidthThem, height: videoHeightThem)
     }
     
     /**
@@ -170,8 +199,9 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
     func subscriberDidConnectToStream(subscriberKit: OTSubscriberKit) {
         NSLog("subscriberDidConnectToStream (\(subscriberKit))")
         if let view = subscriber?.view {
-            view.frame =  CGRect(x: 0.0, y: videoHeight, width: videoWidth, height: videoHeight)
+            view.frame = CGRect(x: 0.0, y: topMargin, width: videoWidthMe, height: videoHeightMe - topMargin)
             self.view.addSubview(view)
+            self.view.bringSubviewToFront(publisher!.view)
         }
     }
     

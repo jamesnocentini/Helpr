@@ -14,5 +14,7 @@
 
 @property ( nonatomic, weak ) Product* product;
 @property (strong, nonatomic) IBOutlet UILabel *Title;
+@property (strong, nonatomic) IBOutlet UIImageView *Image;
+@property (strong, nonatomic) IBOutlet UILabel *Description;
 
 @end

@@ -8,3 +8,4 @@
 
 #import <OpenTok/OpenTok.h>
 #import "RangingManager.h"
+#import "Product.h"

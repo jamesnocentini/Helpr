@@ -8,6 +8,7 @@
 
 #import "ProductDetailsViewController.h"
 #import "Product.h"
+#import "Helpr-Swift.h"
 
 @interface ProductDetailsViewController ()
 
@@ -34,6 +35,15 @@
     if (_product)
     {
         self.Title.text = _product.title;
+        
+        // Set the image
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:[_product.imageName stringByDeletingPathExtension] ofType:[_product.imageName pathExtension]];
+        
+        UIImage *image = [UIImage imageWithContentsOfFile:filePath];
+        self.Image.image = image;
+        
+        // Set the description (not set yet)
+//        self.Description.text = _product.description;
     }
 }
 
@@ -59,8 +69,13 @@
 
 
 - (void)setProduct:(Product *)product {
-    
     _product = product;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    VideoViewController* destination = [segue destinationViewController];
+    [destination setProduct:_product];
+}
+
 
 @end

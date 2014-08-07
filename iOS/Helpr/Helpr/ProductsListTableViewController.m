@@ -74,6 +74,8 @@
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
                                                                             action:@selector(filterTableView)];
+    // To make the navigation bar black
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
 
 }
 
@@ -204,6 +206,8 @@
     Product* product = category.products[indexPath.row];
     
     [destination setProduct:product];
+
+    
     
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
