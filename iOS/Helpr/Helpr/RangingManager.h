@@ -6,6 +6,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
+extern NSString* RangingManager_DidRangeBeacons;
+
 @interface RangingManager : NSObject < CLLocationManagerDelegate >
 
 + (RangingManager *) defaultInstance;

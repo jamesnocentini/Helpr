@@ -13,8 +13,8 @@
 @interface ProductDetailsViewController : UIViewController
 
 @property ( nonatomic, weak ) Product* product;
-@property (strong, nonatomic) IBOutlet UILabel *Title;
-@property (strong, nonatomic) IBOutlet UIImageView *Image;
-@property (strong, nonatomic) IBOutlet UILabel *Description;
+@property (strong, nonatomic) IBOutlet UILabel *productTitle;
+@property (strong, nonatomic) IBOutlet UILabel *productDescription;
+@property (strong, nonatomic) IBOutlet UIImageView *image;
 
 @end

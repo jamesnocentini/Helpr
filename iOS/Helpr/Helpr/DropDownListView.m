@@ -28,7 +28,7 @@
     }
     return self;
 }
-- (id)initWithTitle:(NSString *)aTitle options:(NSArray *)aOptions xy:(CGPoint)point size:(CGSize)size isMultiple:(BOOL)isMultiple
+- (id)initWithTitle:(NSString *)aTitle options:(NSArray *)aOptions selectedIndexes: (NSArray*)selectedIndexes xy:(CGPoint)point size:(CGSize)size isMultiple:(BOOL)isMultiple
 {
     isMultipleSelection=isMultiple;
     CGRect rect = CGRectMake(point.x, point.y,size.width,size.height);
@@ -37,7 +37,13 @@
         self.backgroundColor = [UIColor clearColor];
         _kTitleText = [aTitle copy];
         _kDropDownOption = [aOptions copy];
-        self.arryData=[[NSMutableArray alloc]init];
+        
+        if (selectedIndexes == nil) {
+            self.selectedIndexes = [[NSMutableArray alloc]init];
+        } else {
+            self.selectedIndexes = [[NSMutableArray alloc]initWithArray:selectedIndexes];
+        }
+        
         _kTableView = [[UITableView alloc] initWithFrame:CGRectMake(DROPDOWNVIEW_SCREENINSET,
                                                                    DROPDOWNVIEW_SCREENINSET + DROPDOWNVIEW_HEADER_HEIGHT,
                                                                    rect.size.width - 2 * DROPDOWNVIEW_SCREENINSET,
@@ -46,36 +52,39 @@
         _kTableView.backgroundColor = [UIColor clearColor];
         _kTableView.dataSource = self;
         _kTableView.delegate = self;
+        
         [self addSubview:_kTableView];
-        if (isMultipleSelection) {
+        if (isMultipleSelection)
+        {
             UIButton *btnDone=[UIButton  buttonWithType:UIButtonTypeCustom];
             [btnDone setFrame:CGRectMake(rect.origin.x+182,rect.origin.y-45, 82, 31)];
             [btnDone setImage:[UIImage imageNamed:@"done@2x.png"] forState:UIControlStateNormal];
             [btnDone addTarget:self action:@selector(Click_Done) forControlEvents: UIControlEventTouchUpInside];
             [self addSubview:btnDone];
         }
-
-        
     }
+    
     return self;
 }
 -(void)Click_Done{
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(DropDownListView:Datalist:)]) {
-        NSMutableArray *arryResponceData=[[NSMutableArray alloc]init];
-        NSLog(@"%@",self.arryData);
-        for (int k=0; k<self.arryData.count; k++) {
-            NSIndexPath *path=[self.arryData objectAtIndex:k];
-            [arryResponceData addObject:[_kDropDownOption objectAtIndex:path.row]];
-            NSLog(@"pathRow=%d",path.row);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(DropDownListView:didSelectMultiple:)]) {
+/*        NSMutableArray *selectedRows=[[NSMutableArray alloc]init];
+
+        for (int k=0; k<self.selectedIndexes.count; k++)
+        {
+            NSNumber *path=[self.selectedIndexes objectAtIndex:k];
+            [selectedRows addObject:[_kDropDownOption objectAtIndex:path.integerValue]];
         }
-    
-        [self.delegate DropDownListView:self Datalist:arryResponceData];
-        
+ 
+        [self.delegate DropDownListView:self didSelectMultiple:selectedRows];
+*/
+        [self.delegate DropDownListView:self didSelectMultiple:self.selectedIndexes];
     }
     // dismiss self
     [self fadeOut];
 }
+
 #pragma mark - Private Methods
 - (void)fadeIn
 {
@@ -124,7 +133,17 @@
     int row = [indexPath row];
     UIImageView *imgarrow=[[UIImageView alloc]init ];
     
-    if([self.arryData containsObject:indexPath]){
+    NSNumber* selected = nil;
+    for (NSNumber* row in self.selectedIndexes) {
+        if (row.integerValue == indexPath.row)
+        {
+            selected = row;
+            break;
+        }
+    }
+    
+    if (selected != nil) {
+    //if([self.selectedIndexes containsObject:indexPath]){
         imgarrow.frame=CGRectMake(230,2, 27, 27);
         imgarrow.image=[UIImage imageNamed:@"check_mark@2x.png"];
 	} else
@@ -139,34 +158,46 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (isMultipleSelection) {
-        if([self.arryData containsObject:indexPath]){
-            [self.arryData removeObject:indexPath];
-        } else {
-            [self.arryData addObject:indexPath];
+        
+        NSNumber* selected = nil;
+        for (NSNumber* row in self.selectedIndexes) {
+            if (row.integerValue == indexPath.row)
+            {
+                selected = row;
+                break;
+            }
         }
+        
+        if (selected != nil)
+        {
+            [self.selectedIndexes removeObject:selected];
+        } else {
+            [self.selectedIndexes addObject:[[NSNumber alloc]initWithInteger:indexPath.row]];
+        }
+        
+        /*
+        if([self.selectedIndexes containsObject:indexPath]){
+            [self.selectedIndexes removeObject:indexPath];
+        } else {
+            [self.selectedIndexes addObject:indexPath];
+        }
+        */
         [tableView reloadData];
-
-    }
-    else{
+    } else {
     
-        if (self.delegate && [self.delegate respondsToSelector:@selector(DropDownListView:didSelectedIndex:)]) {
-            [self.delegate DropDownListView:self didSelectedIndex:[indexPath row]];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(DropDownListView:didSelectSingle:)]) {
+            [self.delegate DropDownListView:self didSelectSingle:[indexPath row]];
         }
         // dismiss self
         [self fadeOut];
     }
-	
 }
 
-#pragma mark - TouchTouchTouch
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     // tell the delegate the cancellation
-    
-    
 }
 
-#pragma mark - DrawDrawDraw
 - (void)drawRect:(CGRect)rect
 {
     CGRect bgRect = CGRectInset(rect, DROPDOWNVIEW_SCREENINSET, DROPDOWNVIEW_SCREENINSET);
@@ -217,7 +248,9 @@
     CGContextFillRect(ctx, separatorRect);
     
 }
+
 -(void)SetBackGroundDropDwon_R:(CGFloat)r G:(CGFloat)g B:(CGFloat)b alpha:(CGFloat)alph{
+
     R=r;
     G=g;
     B=b;

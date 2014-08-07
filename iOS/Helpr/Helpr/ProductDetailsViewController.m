@@ -34,16 +34,13 @@
 
     if (_product)
     {
-        self.Title.text = _product.title;
-        
-        // Set the image
+        self.productTitle.text = _product.title;
+        self.productDescription.text = _product.productDescription;
+
         NSString *filePath = [[NSBundle mainBundle] pathForResource:[_product.imageName stringByDeletingPathExtension] ofType:[_product.imageName pathExtension]];
         
         UIImage *image = [UIImage imageWithContentsOfFile:filePath];
-        self.Image.image = image;
-        
-        // Set the description (not set yet)
-//        self.Description.text = _product.description;
+        self.image.image = image;
     }
 }
 

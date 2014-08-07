@@ -11,6 +11,7 @@
 #import "Product.h"
 #import "ProductCategory.h"
 #import "ProductDetailsViewController.h"
+#import "RangingManager.h"
 
 @interface NSArray (myTransformingAddition)
 -(NSArray*)transformWithBlock:(id(^)(id))block;
@@ -34,6 +35,8 @@
 @implementation ProductsListTableViewController
 {
     NSMutableArray * _categories;
+    NSArray* _selectedCategoryIndexes;
+    NSArray* _selectedCategories;
 }
 
 +(NSDictionary*) fromJsonFile:(NSString*)fileLocation {
@@ -57,6 +60,14 @@
         ProductCategory* category = [[ProductCategory alloc]initFromJson: jsonCategory];
         [_categories addObject:category];
     }
+    
+    NSMutableArray* mutableSelectedIndex = [[NSMutableArray alloc]initWithCapacity:_categories.count];
+    for (int n = 0; n < _categories.count; n++) {
+        [mutableSelectedIndex addObject:[[NSNumber alloc]initWithInt:n]];
+    }
+    
+    _selectedCategoryIndexes = mutableSelectedIndex;
+    _selectedCategories = _categories;
 }
 
 - (void)viewDidLoad {
@@ -70,6 +81,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(filterCategories:) name:RangingManager_DidRangeBeacons object:nil];
+
+    
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Filter"
                                                                              style:UIBarButtonItemStylePlain
                                                                             target:self
@@ -79,22 +93,63 @@
 
 }
 
--(void)showPopUpWithTitle:(NSString*)popupTitle withOption:(NSArray*)arrOptions xy:(CGPoint)point size:(CGSize)size isMultiple:(BOOL)isMultiple{
+- (void) filterCategories:(NSNotification*)notificationObject{
+
+    if (notificationObject == nil || notificationObject.object == nil)
+        return;
     
-    Dropobj = [[DropDownListView alloc] initWithTitle:popupTitle options:arrOptions xy:point size:size isMultiple:isMultiple];
+    NSArray* beacons = notificationObject.object;
+    
+    NSMutableArray* selectedCategoriesMutable = [[NSMutableArray alloc]init];
+    NSMutableArray* mutableSelectedIndex = [[NSMutableArray alloc]initWithCapacity:_categories.count];
+
+        for (CLBeacon* beacon in beacons) {
+            for (int n=0; n < _categories.count; n++) {
+                ProductCategory* cat = _categories[n];
+                if (cat.beaconId == beacon.minor.integerValue)
+                {
+                    [selectedCategoriesMutable addObject:cat];
+                    [mutableSelectedIndex addObject:[[NSNumber alloc]initWithInt:n]];
+                }
+            }
+        }
+    
+    if (selectedCategoriesMutable.count > 0)
+    {
+        _selectedCategories = selectedCategoriesMutable;
+        _selectedCategoryIndexes = mutableSelectedIndex;
+        [self.tableView reloadData];
+    }
+}
+
+-(void)showPopUpWithTitle:(NSString*)popupTitle withOption:(NSArray*)arrOptions isMultiple:(BOOL)isMultiple{
+    
+    Dropobj = [[DropDownListView alloc] initWithTitle:popupTitle options:arrOptions selectedIndexes:_selectedCategoryIndexes xy:CGPointMake(16, 58) size:CGSizeMake(287, 330) isMultiple:isMultiple];
     Dropobj.delegate = self;
     [Dropobj showInView:self.view animated:YES];
     
     [Dropobj SetBackGroundDropDwon_R:0.0 G:108.0 B:194.0 alpha:0.70];
 }
 
-- (void)DropDownListView:(DropDownListView *)dropdownListView didSelectedIndex:(NSInteger)anIndex {
+- (void)DropDownListView:(DropDownListView *)dropdownListView didSelectSingle:(NSInteger)itemIndex {
+    
 }
 
-- (void)DropDownListView:(DropDownListView *)dropdownListView Datalist:(NSMutableArray*)data {
+- (void)DropDownListView:(DropDownListView *)dropdownListView didSelectMultiple:(NSMutableArray*)data {
+    _selectedCategoryIndexes = data;
+    
+    NSMutableArray* selectedCategoriesMutable = [[NSMutableArray alloc]init];
+    
+    for (NSNumber* index in _selectedCategoryIndexes) {
+        [selectedCategoriesMutable addObject:_categories[index.integerValue]];
+    }
+    
+    _selectedCategories = selectedCategoriesMutable;
+    
+    [self.tableView reloadData];
 }
 
-- (void)DropDownListViewDidCancel{
+- (void)DropDownListViewDidCancel {
     
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -111,9 +166,8 @@
         return ((ProductCategory*)o).title;
     }];
 
-    
     [Dropobj fadeOut];
-    [self showPopUpWithTitle:@"Select Categories" withOption:categoryNames xy:CGPointMake(16, 58) size:CGSizeMake(287, 330) isMultiple:YES];
+    [self showPopUpWithTitle:@"Select Categories" withOption:categoryNames isMultiple:YES];
 
 }
 
@@ -126,12 +180,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return _categories.count;
+    return _selectedCategories.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    ProductCategory* category = _categories[section];
+    ProductCategory* category = _selectedCategories[section];
     
     return category.products.count;
 }
@@ -140,7 +194,7 @@
     
     ProductTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"productCell" forIndexPath:indexPath];
     
-    ProductCategory* category = _categories[indexPath.section];
+    ProductCategory* category = _selectedCategories[indexPath.section];
     Product* product = category.products[indexPath.row];
     
     [cell setProduct:product];
@@ -150,7 +204,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    ProductCategory* category = _categories[section];
+    ProductCategory* category = _selectedCategories[section];
 
     return category.title;
 }
@@ -202,7 +256,7 @@
     
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 
-    ProductCategory* category = _categories[indexPath.section];
+    ProductCategory* category = _selectedCategories[indexPath.section];
     Product* product = category.products[indexPath.row];
     
     [destination setProduct:product];

@@ -29,6 +29,8 @@
 		09FFCEA01992BED200999E27 /* drop_down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09FFCE991992BED200999E27 /* drop_down@2x.png */; };
 		09FFCEA11992BED200999E27 /* DropDownListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FFCE9B1992BED200999E27 /* DropDownListView.m */; };
 		09FFCEA21992BED200999E27 /* DropDownViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FFCE9D1992BED200999E27 /* DropDownViewCell.m */; };
+		09FFCEA51992E26000999E27 /* boots-sales-assistant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09FFCEA41992E26000999E27 /* boots-sales-assistant.jpg */; };
+		09FFCEA71992E36800999E27 /* stock-photo-female-sales-assistant-at-checkout-of-clothing-store-73350697.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 09FFCEA61992E36800999E27 /* stock-photo-female-sales-assistant-at-checkout-of-clothing-store-73350697.jpg */; };
 		BE30A94F1992447600BF3351 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A94E1992447600BF3351 /* AppDelegate.swift */; };
 		BE30A9511992447600BF3351 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE30A9501992447600BF3351 /* ViewController.swift */; };
 		BE30A9541992447600BF3351 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE30A9521992447600BF3351 /* Main.storyboard */; };
@@ -93,6 +95,8 @@
 		09FFCE9B1992BED200999E27 /* DropDownListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownListView.m; sourceTree = "<group>"; };
 		09FFCE9C1992BED200999E27 /* DropDownViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownViewCell.h; sourceTree = "<group>"; };
 		09FFCE9D1992BED200999E27 /* DropDownViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownViewCell.m; sourceTree = "<group>"; };
+		09FFCEA41992E26000999E27 /* boots-sales-assistant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "boots-sales-assistant.jpg"; sourceTree = "<group>"; };
+		09FFCEA61992E36800999E27 /* stock-photo-female-sales-assistant-at-checkout-of-clothing-store-73350697.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stock-photo-female-sales-assistant-at-checkout-of-clothing-store-73350697.jpg"; sourceTree = "<group>"; };
 		BE30A9491992447600BF3351 /* Helpr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Helpr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE30A94D1992447600BF3351 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE30A94E1992447600BF3351 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +236,8 @@
 		BE30A94B1992447600BF3351 /* Helpr */ = {
 			isa = PBXGroup;
 			children = (
+				09FFCEA61992E36800999E27 /* stock-photo-female-sales-assistant-at-checkout-of-clothing-store-73350697.jpg */,
+				09FFCEA41992E26000999E27 /* boots-sales-assistant.jpg */,
 				09FFCEA31992BEDB00999E27 /* kDropDown */,
 				BE30A94E1992447600BF3351 /* AppDelegate.swift */,
 				09FFCE851992B66F00999E27 /* iBeacon */,
@@ -239,9 +245,9 @@
 				BE30A9521992447600BF3351 /* Main.storyboard */,
 				09FFCE841992B66100999E27 /* Model */,
 				BE70BE2519926BAD00EFD9AE /* OpenTok.framework */,
+				0914A6511992A72800631DB0 /* Products */,
 				093DA32219926C0E00BB4683 /* ProductDetailsViewController.h */,
 				093DA32319926C0E00BB4683 /* ProductDetailsViewController.m */,
-				0914A6511992A72800631DB0 /* Products */,
 				093DA3191992627C00BB4683 /* ProductsListTableViewController.h */,
 				093DA31A1992627C00BB4683 /* ProductsListTableViewController.m */,
 				093DA31C1992638D00BB4683 /* ProductTableViewCell.h */,
@@ -392,6 +398,8 @@
 				0914A6501992A71900631DB0 /* lynx_peace.png in Resources */,
 				BE30A9541992447600BF3351 /* Main.storyboard in Resources */,
 				0914A6491992A71900631DB0 /* cif.jpg in Resources */,
+				09FFCEA51992E26000999E27 /* boots-sales-assistant.jpg in Resources */,
+				09FFCEA71992E36800999E27 /* stock-photo-female-sales-assistant-at-checkout-of-clothing-store-73350697.jpg in Resources */,
 				0914A64B1992A71900631DB0 /* dove_heat_protect_spray.jpg in Resources */,
 				BE30A9561992447600BF3351 /* Images.xcassets in Resources */,
 				0914A64E1992A71900631DB0 /* lynx_2in1.png in Resources */,

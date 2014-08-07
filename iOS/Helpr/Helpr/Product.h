@@ -13,6 +13,8 @@
 - (Product*) initFromJson:(NSDictionary*) jsonProduct;
 
 @property ( nonatomic, copy ) NSString *title;
+@property ( nonatomic, copy ) NSString *productDescription;
+
 @property ( nonatomic, copy ) NSString *imageName;
 
 @end
