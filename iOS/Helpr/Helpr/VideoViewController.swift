@@ -37,12 +37,12 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
     @IBOutlet var Image: UIImageView!
     @IBOutlet var Title: UILabel!
     
-    init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
         Title = UILabel(frame: CGRectZero)
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
     

@@ -29,7 +29,7 @@
                 }
              ],
     "description": "Hair products",
-    "beacon_id": "66"
+    "beacon_id": "58918"
  },
  {
  "id" : "kitchen",
@@ -56,6 +56,6 @@
                  }
     ],
     "description": "Kitchen products",
-    "beacon_id": "2"
+    "beacon_id": "59018"
  }
 ]
