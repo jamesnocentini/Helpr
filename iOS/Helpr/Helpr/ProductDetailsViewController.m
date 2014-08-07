@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.footerBar.barStyle = UIBarStyleBlack;
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -70,8 +71,8 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSString* name = [[sender titleLabel] text];
-    if ([name  isEqual: @"Call Assistant"]) {
+    NSString* name = [sender title];
+    if ([name  isEqual: @"Find me"]) {
 
     } else {
         VideoViewController* destination = [segue destinationViewController];

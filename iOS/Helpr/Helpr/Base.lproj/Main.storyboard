@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Avf-3h-tnZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <scenes>
         <!--Products-->
@@ -73,32 +74,42 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xft-Lo-VeL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xft-Lo-VeL">
                                 <rect key="frame" x="16" y="72" width="288" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="OiX-9K-XwG"/>
+                                    <constraint firstAttribute="width" constant="288" id="ngG-dd-Oha"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gst-Eq-QAf">
-                                <rect key="frame" x="16" y="403" width="39" height="30"/>
-                                <state key="normal" title="Video">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="YN1-Ys-rDi" kind="push" id="5bP-74-re2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTF-OG-m0L">
-                                <rect key="frame" x="165" y="403" width="139" height="30"/>
-                                <state key="normal" title="Call Assistant">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="mee-6r-V6S" kind="push" id="EXJ-Td-R9B"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cl-95-HrT">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mWx-58-JWS"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Call" width="132" id="0ly-Ih-s8A">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="YN1-Ys-rDi" kind="push" id="wja-Ox-2D4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Find me" width="149" id="XzX-xd-hv0">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="mee-6r-V6S" kind="push" id="g2e-9S-l2u"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oqW-M3-ddF" firstAttribute="top" secondItem="8cl-95-HrT" secondAttribute="bottom" id="5Ae-L2-Xkn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2po-vz-5hW"/>
                     <connections>
+                        <outlet property="footerBar" destination="8cl-95-HrT" id="SPb-Zm-Bro"/>
                         <outlet property="image" destination="xft-Lo-VeL" id="p9F-iS-QQM"/>
                         <outlet property="productDescription" destination="BNp-1x-gSP" id="gxC-fJ-T1z"/>
                         <outlet property="productTitle" destination="4MQ-eS-QKF" id="0dF-aK-Scp"/>
@@ -121,10 +132,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stock-photo-female-sales-assistant-at-checkout-of-clothing-store-73350697.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3Vw-Ng-i97">
-                                <rect key="frame" x="40" y="72" width="240" height="185"/>
+                                <rect key="frame" x="40" y="120" width="240" height="185"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sarah is on her way to meet you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="288" translatesAutoresizingMaskIntoConstraints="NO" id="VoI-BT-0wN">
-                                <rect key="frame" x="16" y="265" width="288" height="47"/>
+                                <rect key="frame" x="16" y="313" width="288" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -153,8 +164,8 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mJ6-So-jfs">
                                 <rect key="frame" x="0.0" y="64" width="320" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current call with Vlad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhF-pA-1sP">
-                                        <rect key="frame" x="83" y="10" width="217" height="21"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calling James" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhF-pA-1sP">
+                                        <rect key="frame" x="83" y="10" width="169" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -163,11 +174,14 @@
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="60"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAo-j4-3r4">
-                                        <rect key="frame" x="83" y="27" width="217" height="21"/>
+                                        <rect key="frame" x="83" y="27" width="169" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t2Q-qQ-XLE">
+                                        <rect key="frame" x="260" y="0.0" width="60" height="60"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -181,6 +195,7 @@
                     <connections>
                         <outlet property="Image" destination="u3K-Fm-bxF" id="JfR-jK-xHh"/>
                         <outlet property="Title" destination="kAo-j4-3r4" id="eL3-Kw-qVN"/>
+                        <outlet property="profilePicture" destination="t2Q-qQ-XLE" id="rW7-iU-T4g"/>
                         <outlet property="spinner" destination="PoT-po-q85" id="GCU-G8-UH3"/>
                     </connections>
                 </viewController>

@@ -53,6 +53,7 @@
 		BE70BE45199270F800EFD9AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE44199270F800EFD9AE /* Foundation.framework */; };
 		BE70BE471992710500EFD9AE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE461992710500EFD9AE /* QuartzCore.framework */; };
 		BE70BE4B1992755900EFD9AE /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE70BE4A1992755900EFD9AE /* GLKit.framework */; };
+		BE7420091993865D00ADE502 /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BE7420081993865D00ADE502 /* profile.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		BE70BE461992710500EFD9AE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BE70BE4A1992755900EFD9AE /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		BE70BE4C19927DEA00EFD9AE /* Helpr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Helpr-Bridging-Header.h"; sourceTree = "<group>"; };
+		BE7420081993865D00ADE502 /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				09FFCEA61992E36800999E27 /* stock-photo-female-sales-assistant-at-checkout-of-clothing-store-73350697.jpg */,
+				BE7420081993865D00ADE502 /* profile.jpg */,
 				09FFCEA41992E26000999E27 /* boots-sales-assistant.jpg */,
 				09FFCEA31992BEDB00999E27 /* kDropDown */,
 				BE30A94E1992447600BF3351 /* AppDelegate.swift */,
@@ -388,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09FFCE9F1992BED200999E27 /* done@2x.png in Resources */,
+				BE7420091993865D00ADE502 /* profile.jpg in Resources */,
 				09FFCEA01992BED200999E27 /* drop_down@2x.png in Resources */,
 				09FFCE9E1992BED200999E27 /* check_mark@2x.png in Resources */,
 				0914A6481992A71900631DB0 /* biotex.jpg in Resources */,

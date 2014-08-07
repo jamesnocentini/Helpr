@@ -37,13 +37,14 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
     @IBOutlet var Image: UIImageView!
     @IBOutlet var Title: UILabel!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var profilePicture: UIImageView!
     
-    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+    init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
         Title = UILabel(frame: CGRectZero)
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    required init(coder aDecoder: NSCoder!) {
+    init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
     
@@ -53,6 +54,10 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var filePath = NSBundle.mainBundle().pathForResource("profile", ofType: "jpg")
+        var image = UIImage(contentsOfFile: filePath)
+        profilePicture.image = image
 
         if UIDevice.currentDevice().name == "Petroff" {
             Token = Token1
@@ -115,7 +120,7 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
         }
         
         view.addSubview(publisher!.view)
-        publisher!.view.frame = CGRect(x: 160, y: 370, width: videoWidthThem, height: videoHeightThem)
+        publisher!.view.frame = CGRect(x: 160, y: self.view.bounds.height - 110, width: videoWidthThem, height: videoHeightThem)
     }
     
     /**
@@ -202,7 +207,7 @@ class VideoViewController: UIViewController, OTSessionDelegate, OTSubscriberKitD
     func subscriberDidConnectToStream(subscriberKit: OTSubscriberKit) {
         NSLog("subscriberDidConnectToStream (\(subscriberKit))")
         if let view = subscriber?.view {
-            view.frame = CGRect(x: 0.0, y: topMargin, width: videoWidthMe, height: videoHeightMe - topMargin)
+            view.frame = CGRect(x: 0.0, y: topMargin, width: videoWidthMe, height: self.view.bounds.height - topMargin)
             self.view.addSubview(view)
             self.view.bringSubviewToFront(publisher!.view)
         }
