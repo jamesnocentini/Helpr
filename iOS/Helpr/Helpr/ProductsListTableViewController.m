@@ -37,7 +37,11 @@
     NSMutableArray * _categories;
     NSArray* _selectedCategoryIndexes;
     NSArray* _selectedCategories;
+
+    NSMutableArray * _beaconIds;
 }
+
+
 
 +(NSDictionary*) fromJsonFile:(NSString*)fileLocation {
     
@@ -73,6 +77,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _beaconIds = [[NSMutableArray alloc]init];
+    
     [self loadProducts];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -100,13 +106,42 @@
     
     NSArray* beacons = notificationObject.object;
     
-    NSMutableArray* selectedCategoriesMutable = [[NSMutableArray alloc]init];
-    NSMutableArray* mutableSelectedIndex = [[NSMutableArray alloc]initWithCapacity:_categories.count];
-
-        for (CLBeacon* beacon in beacons) {
+    
+    NSMutableArray* newBeaconIds = [[NSMutableArray alloc]init];
+    
+    for (CLBeacon* beacon in beacons) {
+        BOOL found = NO;
+        for (NSNumber* existingId in _beaconIds) {
+            if (beacon.minor.intValue == existingId.intValue)
+            {
+                found = YES;
+                break;
+            }
+        }
+        
+        if (!found){
             for (int n=0; n < _categories.count; n++) {
                 ProductCategory* cat = _categories[n];
                 if (cat.beaconId == beacon.minor.integerValue)
+                {
+                    [newBeaconIds addObject:[[NSNumber alloc]initWithInt:beacon.minor.intValue]];
+                }
+            }
+        }
+    }
+    
+    if (newBeaconIds.count == 0)
+        return;
+    
+    _beaconIds = newBeaconIds;
+    
+    NSMutableArray* selectedCategoriesMutable = [[NSMutableArray alloc]init];
+    NSMutableArray* mutableSelectedIndex = [[NSMutableArray alloc]initWithCapacity:_categories.count];
+
+        for (NSNumber* beaconId in newBeaconIds) {
+            for (int n=0; n < _categories.count; n++) {
+                ProductCategory* cat = _categories[n];
+                if (cat.beaconId == beaconId.integerValue)
                 {
                     [selectedCategoriesMutable addObject:cat];
                     [mutableSelectedIndex addObject:[[NSNumber alloc]initWithInt:n]];
